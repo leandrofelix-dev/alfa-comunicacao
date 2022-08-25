@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Seus serviços, nossas conquistas | Alfa Comunicação</title>
+
+        
+        <!-- Bibliotecas externas -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+        integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+        crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+        integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+        crossorigin=""></script>
+
+        <!-- Estilos -->
+        <link rel="stylesheet" href="./src/css/main.css"> 
+        <link rel="stylesheet" href="./src/css/load.css">
+        <link rel="stylesheet" href="./src/css/animate.css">
+</head>
+<body>
+
+    <div class="section" id="loadPage">
+        <div id="loadSection">
+            <div>
+                <div id="logoAlfa">
+                    <img src="./src/svg/logo-alfa.svg" alt="">
+                </div>
+                <div><div id="wellcome">
+                    <h2 id="wellcomeh2">Olá, seja bem-vind@!</h2>
+                </div>
+                <div id="loadTitle">
+                    <div class="container">
+                        <p>Isso é <span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
+                      </div>
+                </div></div>
+                <div id="scrollLoad">
+                    <p>Role para baixo</p>
+                    <a href="">
+                        <img src="./src/svg/scroll1.svg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section id="main" data-anime="top">
+        <nav>
+            <ul id="nav-menu">
+                <li class="nav-menu-li">
+                    <i class="uil uil-bars"></i>
+                </li>
+                <li class="nav-menu-li">
+                    <a href="#home"><img src="./src/svg/logo-alfa.svg" alt="Logotipo Alfa Comunicação"></a>
+                </li>
+                <li class="nav-menu-li">
+                    <i class="uil uil-sun"></i>
+                </li>
+            </ul>
+        </nav>
+        <section>
+            <div id="main--left">
+                <ul id="social-links">
+                    <li>
+                        <i class="uil uil-linkedin"></i>
+                    </li>
+                    <li>
+                        <i class="uil uil-whatsapp"></i>
+                    </li>
+                    <li>
+                        <i class="uil uil-instagram"></i>
+                    </li>
+                </ul>
+            </div>
+            <hr id="main--separator">
+            <div id="main--right">
+                <h3>ALFA COMUNICAÇÃO</h3>
+                <h1>Seus serviços, nossas conquistas!</h1>
+            </div>
+        </section>
+        <button id="main--cta-button">
+            <div>
+                <i class="uil uil-briefcase-alt"></i>
+            </div>
+            <div>
+                <p>Veja nossos<br>serviços!</p>
+            </div>
+        </button>
+        <div id="main--service" data-anime="right">
+            <ul id="main--service-ul">
+                <li class="main--service-photos">
+                    <img src="./src/img/img1.png" alt="Foto de serviço 1">
+                </li>
+                <li class="main--service-photos">
+                    <img src="./src/img/img2.png" alt="Foto de serviço 2">
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section id="aboutUs" class="sectionSkew">
+        <div>
+            <div class="section--header">
+                <div class="section--line"></div>
+                <h2 class="section--title" class="sectionRotated--title">Quem nós <br> somos?</h2>
+            </div>
+            <div class="section--body">
+                <h5 class="section--text" class="sectionRotated--text">Alfa comunicação é uma empresa que atua no ramo de comunicação visual, serviços gráficos e impressão digital. Há mais de 7 anos no mercado, nos tornamos uma empresa referencial em qualidade de atendimento, serviço e prazo de entrega.</h5>
+            </div>
+        </div>
+    </section>
+    <section id="services" data-anime="left">
+        <div>
+            <div class="section--header">
+                <div class="section--line"></div>
+                <div>
+                    <h2 class="section--title">Nossos Serviços</h2>
+                    <h6 class="section--subtitle">Veja os serviços prestados por nós</h6>
+                </div>
+            </div>
+            <div>
+                <ul id="service--category">
+                    <li class="service--category-item">Serviços em ACM</li>
+                    <li class="service--category-item">Envelopamentos</li>
+                    <li class="service--category-item">Placas</li>
+                    <li class="service--category-item">Serviços Gráficos</li>
+                    <li class="service--category-item">Letras Caixa</li>
+                </ul>
+            </div>
+        </div>
+        <div class="card">
+            <div class="service--card">
+                <div class="service--card-image"></div>
+                <div class="service--card-info">
+                    <h5>ACM</h5>
+                    <p>Os serviços em ACM são formados por revestimentos em Alumínio Composto, que em inglês é Aluminum Composite Material, termo original da sigla ACM. Trata-se de um material formado por duas chapas de alumínio pintado, com um núcleo de plástico polietileno, produzido dentro dos padrões de tecnologia ISO 9001; 2000.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="instagram" class="sectionSkew" data-anime="top">
+        <div>
+            <div class="section--header">
+                <div class="section--line"></div>
+                <div>
+                    <h2 class="section--title">Serviços recentes</h2>
+                    <h6 class="section--subtitle-alt">Siga-nos no instagram <br>e fique por dentro do nosso dia-a-dia!</h6>
+                </div>
+            </div>
+            <div id="instaRecentes">
+                <!-- Aqui, o conteúdo é injetado no DOM via instapi, pelo JS -->
+            </div>
+            <h3><a href="http://instagram.com/alfacomunicacao_va" target="_blank"></i> @alfacomunicacao_va</a></h3>
+        </div>
+    </section>
+    <section id="empresas" data-anime="left">
+        <div>
+            <div class="section--header">
+                <div class="section--line"></div>
+                <div>
+                    <h2 class="section--title">Empresas parceiras</h2>
+                    <h6 class="section--subtitle">Conheça algumas empresas <br> que
+                        conhecem e confiam no nosso
+                        trabalho.</h6>
+                </div>
+            </div>
+            <div>
+                <ul class="empresas__list">
+                    <li class="empresas__icons">Logo 01</li>
+                    <li class="empresas__icons">Logo 02</li>
+                    <li class="empresas__icons">Logo 03</li>
+                    <li class="empresas__icons">Logo 04</li>
+                    <li class="empresas__icons">Logo 05</li>
+                    <li class="empresas__icons">Logo 06</li>
+                    <li class="empresas__icons">Logo 07</li>
+                    <li class="empresas__icons">Logo 08</li>
+                    <li class="empresas__icons">Logo 09</li>
+                    <li class="empresas__icons">Logo 10</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section id="footer" data-anime="left">
+        <div>
+            <div class="section--header" id="footer__header">
+                    <h2 class="footer--title">Venha nos conhecer</h2>
+                    <h6 class="footer--subtitle">Rua Dona Mundinha Costa, 211 Juremal Várzea Alegre/CE</h6>
+                    <hr id="footer__separator">
+            </div>
+            <div>
+                <h6 class="footer--subtitle">Siga-nos nas nossas redes sociais:</h6>
+                <ul id="footer__social-list">
+                    <li class="footer__socials">
+                        <a href=""><i class="uil uil-facebook footer__socials-i"></i></a>
+                    </li>
+                    <li class="footer__socials">
+                        <a href=""><i class="uil uil-linkedin footer__socials-i"></i></a>
+                    </li>
+                    <li class="footer__socials">
+                        <a href=""><i class="uil uil-whatsapp footer__socials-i"></i></a>
+                    </li>
+                    <li class="footer__socials">
+                        <a href=""><i class="uil uil-instagram footer__socials-i"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div id="footer__institucional">
+                <div>
+                    <h3>Institucional</h3>
+                    <ul>
+                        <li><a href="#main">Início</a></li>
+                        <li><a href="#aboutUs">Sobre nós</a></li>
+                        <li><a href="#footer">Contato</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Informações</h3>
+                    <ul>
+                        <li><a href="">Perguntas frequentes</a></li>
+                        <li><a href="">Segurança e privacidade</a></li>
+                        <li><a href="">Suporte técnico</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="mapSection">
+        <div id="map"></div>
+    </section>
+    <section id="footerMessage">
+        <p>@ 2022 Alfa Comunicação Visual. Todos os direitos reservados. Feito com 💙 por Leandro Félix</p>
+    </section>
+
+   
+    <!-- Scripts Locais -->
+    <script src="./src/js/load.js"></script>
+    <script src="./src/js/animate.js"></script>
+    <script src="./src/js/instapi.js"></script>
+    <script src="./src/js/location.js"></script>
+    
+</body>
+</html>
