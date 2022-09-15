@@ -6,29 +6,32 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <title>Seus serviços, nossas conquistas | Alfa Comunicação</title>
-
         
+        <script src="./public/js/index.js"></script>
+
         <!-- Bibliotecas externas -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"/>
+        
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
-        integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
-        crossorigin=""/>
-        <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
-        integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
-        crossorigin=""></script>
 
+        <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"></script>
+        
         <!-- Estilos -->
-        <link rel="stylesheet" href="./src/css/main.css"> 
-        <link rel="stylesheet" href="./src/css/load.css">
-        <link rel="stylesheet" href="./src/css/animate.css">
-</head>
-<body>
+        <link rel="stylesheet" href="./public/css/main.css"> 
+        <link rel="stylesheet" href="./public/css/load.css">
+        <link rel="stylesheet" href="./public/css/animate.css">
+    </head>
+    <body>
 
+    <div id="arrow">
+        <a href=""><img src="./public/svg/arrow.svg" alt=""></a>
+    </div>
+    
     <div class="section" id="loadPage">
         <div id="loadSection">
             <div>
                 <div id="logoAlfa">
-                    <img src="./src/svg/logo-alfa.svg" alt="">
+                    <img src="./public/svg/logo-alfa.svg" alt="">
                 </div>
                 <div><div id="wellcome">
                     <h2 id="wellcomeh2">Olá, seja bem-vind@!</h2>
@@ -36,25 +39,62 @@
                 <div id="loadTitle">
                     <div class="container">
                         <p>Isso é <span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
-                      </div>
+                    </div>
                 </div></div>
                 <div id="scrollLoad">
                     <p>Role para baixo</p>
-                    <a href="">
-                        <img src="./src/svg/scroll1.svg" alt="">
+                    <a>
+                        <img src="./public/svg/scroll1.svg" alt="">
                     </a>
                 </div>
             </div>
         </div>
     </div>
+
+    <section id="desktopMain">
+        <!-- Menu de navegação na versão desktop -->
+        <header>
+            <nav>
+                <a href="#home" id="navImg">
+                    <img src="./public/svg/logo-alfa-alt.svg" alt="Logotipo Alfa Comunicação">
+                </a>
+
+                <ul id="desktopNav__list">
+                    <li class="desktopNav__element">Início</li>
+                    <li class="desktopNav__element">Quem somos</li>
+                    <li class="desktopNav__element">Serviços</li>
+                    <li class="desktopNav__element">Fotos</li>
+                    <li class="desktopNav__element">Parceiros</li>
+                    <li class="desktopNav__element"><b>Blog(Em breve)</b></li>
+                </ul>
+
+                <li class="nav-menu-li">
+                    <i class="uil uil-sun"></i>
+                </li>
+            </nav>
+        </header>
+        <section id="desktopHome">
+            <div class="mainDesktop__content">
+                <div class="mainDesktop__left">
+                        <h3>ALFA COMUNICAÇÃO</h3>
+                        <h1>Seus serviços, <br> nossas <br> conquistas!</h1>
+                </div>
+                <div class="mainDesktop__right">
+                    <img src="./public/img/services-image.png" alt="">
+                </div>
+            </div>
+        </section>
+    </section>
+    
     <section id="main" data-anime="top">
         <nav>
+            <img src="./public/svg/blob-1.svg" alt="" srcset="" id="mainBackground">
             <ul id="nav-menu">
                 <li class="nav-menu-li">
                     <i class="uil uil-bars"></i>
                 </li>
                 <li class="nav-menu-li">
-                    <a href="#home"><img src="./src/svg/logo-alfa.svg" alt="Logotipo Alfa Comunicação"></a>
+                    <a href="#home"><img src="./public/svg/logo-alfa.svg" alt="Logotipo Alfa Comunicação"></a>
                 </li>
                 <li class="nav-menu-li">
                     <i class="uil uil-sun"></i>
@@ -92,28 +132,30 @@
         <div id="main--service" data-anime="right">
             <ul id="main--service-ul">
                 <li class="main--service-photos">
-                    <img src="./src/img/img1.png" alt="Foto de serviço 1">
+                    <img src="./public/img/img1.png" alt="Foto de serviço 1">
                 </li>
                 <li class="main--service-photos">
-                    <img src="./src/img/img2.png" alt="Foto de serviço 2">
+                    <img src="./public/img/img2.png" alt="Foto de serviço 2">
                 </li>
             </ul>
         </div>
     </section>
+
     <section id="aboutUs" class="sectionSkew">
         <div>
-            <div class="section--header">
+            <div class="section--header dinamicRev">
                 <div class="section--line"></div>
                 <h2 class="section--title" class="sectionRotated--title">Quem nós <br> somos?</h2>
             </div>
-            <div class="section--body">
+            <div class="section--body dinamicRev">
                 <h5 class="section--text" class="sectionRotated--text">Alfa comunicação é uma empresa que atua no ramo de comunicação visual, serviços gráficos e impressão digital. Há mais de 7 anos no mercado, nos tornamos uma empresa referencial em qualidade de atendimento, serviço e prazo de entrega.</h5>
             </div>
         </div>
     </section>
+
     <section id="services" data-anime="left">
         <div>
-            <div class="section--header">
+            <div class="section--header dinamicRev">
                 <div class="section--line"></div>
                 <div>
                     <h2 class="section--title">Nossos Serviços</h2>
@@ -130,7 +172,7 @@
                 </ul>
             </div>
         </div>
-        <div class="card">
+        <div class="card ">
             <div class="service--card">
                 <div class="service--card-image"></div>
                 <div class="service--card-info">
@@ -140,9 +182,10 @@
             </div>
         </div>
     </section>
-    <section id="instagram" class="sectionSkew" data-anime="top">
+
+    <section id="instagram" class="sectionSkew">
         <div>
-            <div class="section--header">
+            <div class="section--header scrollReveal">
                 <div class="section--line"></div>
                 <div>
                     <h2 class="section--title">Serviços recentes</h2>
@@ -155,7 +198,8 @@
             <h3><a href="http://instagram.com/alfacomunicacao_va" target="_blank"></i> @alfacomunicacao_va</a></h3>
         </div>
     </section>
-    <section id="empresas" data-anime="left">
+
+    <section id="empresas">
         <div>
             <div class="section--header">
                 <div class="section--line"></div>
@@ -164,45 +208,46 @@
                     <h6 class="section--subtitle">Conheça algumas empresas <br> que
                         conhecem e confiam no nosso
                         trabalho.</h6>
-                </div>
+                    </div>
             </div>
             <div>
                 <ul class="empresas__list">
-                    <li class="empresas__icons">Logo 01</li>
-                    <li class="empresas__icons">Logo 02</li>
-                    <li class="empresas__icons">Logo 03</li>
-                    <li class="empresas__icons">Logo 04</li>
-                    <li class="empresas__icons">Logo 05</li>
-                    <li class="empresas__icons">Logo 06</li>
-                    <li class="empresas__icons">Logo 07</li>
-                    <li class="empresas__icons">Logo 08</li>
-                    <li class="empresas__icons">Logo 09</li>
-                    <li class="empresas__icons">Logo 10</li>
+                    <li class="empresas__icons"><img src="./public/img/parceiros/sq.png" alt=""></li>
+                    <li class="empresas__icons"><img src="./public/img/parceiros/afap.png" alt=""></li>
+                    <li class="empresas__icons"><img src="./public/img/parceiros/correios.png" alt=""></li>
+                    <li class="empresas__icons"><img src="./public/img/parceiros/sf.png" alt=""></li>
+                    <li class="empresas__icons"><img src="./public/img/parceiros/alan.png" alt=""></li>
+                    <li class="empresas__icons"><img src="./public/img/parceiros/bf.png" alt=""></li>
+                    <li class="empresas__icons"><img src="./public/img/parceiros/fbe.png" alt=""></li>
+                    <li class="empresas__icons"><img src="./public/img/parceiros/mdl.png" alt=""></li>
+                    <li class="empresas__icons"><img src="./public/img/parceiros/f4.png" alt=""></li>
+                    <li class="empresas__icons"><img src="./public/img/parceiros/lg.png" alt=""></li>
                 </ul>
             </div>
         </div>
     </section>
-    <section id="footer" data-anime="left">
+
+    <section id="footer">
         <div>
             <div class="section--header" id="footer__header">
                     <h2 class="footer--title">Venha nos conhecer</h2>
                     <h6 class="footer--subtitle">Rua Dona Mundinha Costa, 211 Juremal Várzea Alegre/CE</h6>
                     <hr id="footer__separator">
-            </div>
-            <div>
-                <h6 class="footer--subtitle">Siga-nos nas nossas redes sociais:</h6>
-                <ul id="footer__social-list">
-                    <li class="footer__socials">
-                        <a href=""><i class="uil uil-facebook footer__socials-i"></i></a>
-                    </li>
-                    <li class="footer__socials">
-                        <a href=""><i class="uil uil-linkedin footer__socials-i"></i></a>
-                    </li>
-                    <li class="footer__socials">
-                        <a href=""><i class="uil uil-whatsapp footer__socials-i"></i></a>
-                    </li>
-                    <li class="footer__socials">
-                        <a href=""><i class="uil uil-instagram footer__socials-i"></i></a>
+                </div>
+                <div>
+                    <h6 class="footer--subtitle">Siga-nos nas nossas redes sociais:</h6>
+                    <ul id="footer__social-list">
+                        <li class="footer__socials">
+                            <a href=""><i class="uil uil-facebook footer__socials-i"></i></a>
+                        </li>
+                        <li class="footer__socials">
+                            <a href=""><i class="uil uil-linkedin footer__socials-i"></i></a>
+                        </li>
+                        <li class="footer__socials">
+                            <a href=""><i class="uil uil-whatsapp footer__socials-i"></i></a>
+                        </li>
+                        <li class="footer__socials">
+                            <a href=""><i class="uil uil-instagram footer__socials-i"></i></a>
                     </li>
                 </ul>
             </div>
@@ -226,19 +271,20 @@
             </div>
         </div>
     </section>
+
     <section id="mapSection">
         <div id="map"></div>
     </section>
+
     <section id="footerMessage">
         <p>@ 2022 Alfa Comunicação Visual. Todos os direitos reservados. Feito com 💙 por Leandro Félix</p>
     </section>
 
-   
-    <!-- Scripts Locais -->
-    <script src="./src/js/load.js"></script>
-    <script src="./src/js/animate.js"></script>
-    <script src="./src/js/instapi.js"></script>
-    <script src="./src/js/location.js"></script>
     
+    <!-- Scripts Locais -->
+    <script src="./public/js/load.js"></script>
+    <script src="./public/js/animate.js"></script>
+    <script src="./public/js/instapi.js"></script>
+    <script src="./public/js/location.js"></script>
 </body>
 </html>

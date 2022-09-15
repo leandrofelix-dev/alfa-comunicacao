@@ -1,0 +1,120 @@
+@keyframes blink {
+  0%  { background-color: #ccc; }
+  49% { background-color: #ccc; }
+  50% { background-color: transparent; }
+  99% { background-color: transparent; }
+  100%  { background-color: #ccc; }
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
+
+:root{
+    --background: #F5F5F5;
+    --section-title-color:#3A3A3A;
+    --section-subtitle-color:#6A6A6A;
+    --yellow-gradient: linear-gradient(-45deg,#FFB05B, #FFC95A);
+    --blue-gradient: linear-gradient(-45deg, #5171FA, #73ABFF);
+    --blue-light: #92B1FF;
+    --white: #fff9ff;
+
+    --h1-size: 2.4rem;
+    --title-size: 2rem;
+    --subtitle-size: 1rem;
+    --text-size: 1.2rem;
+    --radius: 1rem;
+    --low-radius: .4rem;
+    --shadow: 3px 2px 3px 0px #e1e1e1c7;
+    --between-sections-margin: 2rem;
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+.container p {
+  font-size: 2.4rem;
+  padding: 0.5rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  overflow: hidden;
+}
+.container p span.typed-text {
+  font-weight: normal;
+  color: var(--white);
+  word-wrap: break-word;
+}
+.container p span.cursor {
+  display: inline-block;
+  background-color: var(--yellow-gradient);
+  margin-left: 0.1rem;
+  width: 3px;
+  animation: blink 1s infinite;
+  font-weight: 700;
+}
+.container p span.cursor.typing {
+  animation: none;
+}
+#wellcome{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#wellcomeh2{
+  color: var(--white);
+  background: var(--yellow-gradient);
+  padding: .6rem 2rem;
+  border-radius: .8rem;
+}
+
+#loadTitle>div>p{
+  color: var(--white);
+}
+#loadPage{
+  height: 100vh;
+  width: 100vw;
+  background-image: url(/public/img/projeto-alfa.png);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  position: fixed;
+  z-index: 2000;
+  display: none;
+}
+#loadSection{
+  width: 100%;
+  height: 100%;
+  background: var(--blue-gradient);
+  opacity: .94;
+  display: flex !important;
+  z-index: 100000;
+  align-items: center;
+  justify-content: center;
+}
+#loadSection>div>div{
+  margin: 18vh 0;
+}
+#loadSection>div>div>img{
+  width: 10rem;
+}
+#loadH1{
+  color: var(--white);
+}
+#terminalLine{
+  width: 12px;
+  background: var(--yellow-gradient);
+  height: 40px;
+}
+#logoAlfa{
+  display: flex;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+}
+#scrollLoad{
+  color: var(--white);
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#scrollLoad>a>img{
+  width: 3rem;
+}
