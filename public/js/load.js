@@ -4,7 +4,7 @@ loadDiv.style.display = "none";
 const typedTextSpan = document.querySelector(".typed-text");
 const cursorSpan = document.querySelector(".cursor");
 
-const textArray = ["Alfa", "Criatividade", "Qualidade"];
+const textArray = ["Alfa", "qualidade", "ética"];
 const typingDelay = 180;
 const erasingDelay = 110;
 const newTextDelay = 1200;
@@ -13,14 +13,14 @@ let charIndex = 0;
 
 const scrollButton = document.querySelector('#scrollLoad')
 const loadPage = document.querySelector('#loadPage')
-    scrollButton.addEventListener("click",() => {
-    loadPage.style.transition = "all linear .4s"
-    loadPage.style.position="absolute"
-    loadPage.style.marginTop="-200%"
-    loadPage.style.opacity= "0"
-    loadPage.style.zIndex = "-1000"
-});
 
+function upLoadPage(){
+    loadPage.style.transition = "all ease-in-out 1s"
+    loadPage.style.opacity= ".75"
+    loadPage.style.position="absolute"
+    loadPage.style.marginTop="-100%"
+    loadPage.style.zIndex = "-1000"
+}
 
 function type() {
   if (charIndex < textArray[textArrayIndex].length) {
@@ -50,7 +50,6 @@ function erase() {
   }
 }
 
-document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
+document.addEventListener("DOMContentLoaded", function() {
   if(textArray.length) setTimeout(type, newTextDelay + 250);
 });
-

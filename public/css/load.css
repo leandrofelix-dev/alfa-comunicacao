@@ -5,6 +5,7 @@
   99% { background-color: transparent; }
   100%  { background-color: #ccc; }
 }
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
 
 :root{
@@ -38,7 +39,7 @@
   overflow: hidden;
 }
 .container p span.typed-text {
-  font-weight: normal;
+  font-weight: bold;
   color: var(--white);
   word-wrap: break-word;
 }
@@ -71,11 +72,14 @@
 #loadPage{
   height: 100vh;
   width: 100vw;
-  background-image: url(/public/img/projeto-alfa.png);
+  background-image: url(/public/assets/img/projeto-alfa.png);
   background-repeat: no-repeat;
   background-position-x: center;
   position: fixed;
   z-index: 2000;
+  display: none;
+}
+#loadPage__exit-buttonDesktop{
   display: none;
 }
 #loadSection{
@@ -117,4 +121,17 @@
 }
 #scrollLoad>a>img{
   width: 3rem;
+}
+.loadPage__exit-button{
+  cursor: pointer;
+  border-bottom: 3px solid #fff0;
+  display: flex;
+  align-items: center;
+  transition: all .3s;
+  width: 10rem;
+  border-bottom: 3px solid #FFB05B;
+  justify-content: center;
+}
+#loadPage__exit-buttonDesktop:hover{
+  border-bottom: 3px solid #FFB05B;
 }

@@ -1,0 +1,43 @@
+/*Importações*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,300&display=swap');
+
+@import url('https://unicons.iconscout.com/release/v4.0.0/css/line.css');
+
+:root{
+    --background: #F5F5F5;
+    --section-title-color:#3A3A3A;
+    --section-subtitle-color:#6A6A6A;
+    --yellow-gradient: linear-gradient(-45deg,#FFB05B, #FFC95A);
+    --blue-gradient: linear-gradient(-45deg, #302df5, #73ABFF);
+    --blue-light: #92B1FF;
+    --white: #fff9ff;
+    --shadow: 3px 2px 3px 0px #e1e1e1c7;
+
+    --h1-size: 2.4rem;
+    --title-size: 2rem;
+    --subtitle-size: 1rem;
+    --text-size: 1.2rem;
+    --span-size: .9rem;
+    --radius: 1rem;
+    --low-radius: .4rem;
+    --between-sections-margin: 2rem;
+    
+}  /* ====================== */
+*{
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    transition: all .3s ease-in-out;
+}
+html,
+body{
+    width: 100vw;
+    height: 100vh;
+    background: var(--background);
+    display: flex;
+    flex-direction: column;
+    transition: all .3s;
+    scroll-behavior: smooth;
+}
