@@ -1,35 +1,23 @@
+@import "./global.css";
+
 @keyframes blink {
-  0%  { background-color: #ccc; }
-  49% { background-color: #ccc; }
-  50% { background-color: transparent; }
-  99% { background-color: transparent; }
-  100%  { background-color: #ccc; }
+  0% {
+    background-color: #ccc;
+  }
+  49% {
+    background-color: #ccc;
+  }
+  50% {
+    background-color: transparent;
+  }
+  99% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: #ccc;
+  }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
-
-:root{
-    --background: #F5F5F5;
-    --section-title-color:#3A3A3A;
-    --section-subtitle-color:#6A6A6A;
-    --yellow-gradient: linear-gradient(-45deg,#FFB05B, #FFC95A);
-    --blue-gradient: linear-gradient(-45deg, #5171FA, #73ABFF);
-    --blue-light: #92B1FF;
-    --white: #fff9ff;
-
-    --h1-size: 2.4rem;
-    --title-size: 2rem;
-    --subtitle-size: 1rem;
-    --text-size: 1.2rem;
-    --radius: 1rem;
-    --low-radius: .4rem;
-    --shadow: 3px 2px 3px 0px #e1e1e1c7;
-    --between-sections-margin: 2rem;
-}
-
-*{
-    font-family: 'Poppins', sans-serif;
-}
 .container p {
   font-size: 2.4rem;
   padding: 0.5rem;
@@ -54,22 +42,24 @@
 .container p span.cursor.typing {
   animation: none;
 }
-#wellcome{
+#wellcome {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-#wellcomeh2{
+#wellcome__h2 {
   color: var(--white);
   background: var(--yellow-gradient);
-  padding: .6rem 2rem;
-  border-radius: .8rem;
+  padding: 0.6rem 2rem;
+  border-radius: 0.8rem;
+  text-align: center;
+  max-width: 60vw;
 }
 
-#loadTitle>div>p{
+#loadTitle > div > p {
   color: var(--white);
 }
-#loadPage{
+#loadPage {
   height: 100vh;
   width: 100vw;
   background-image: url(/public/assets/img/projeto-alfa.png);
@@ -77,61 +67,61 @@
   background-position-x: center;
   position: fixed;
   z-index: 2000;
+  /* display: none; */
+}
+#loadPage__exit-buttonDesktop {
   display: none;
 }
-#loadPage__exit-buttonDesktop{
-  display: none;
-}
-#loadSection{
+#loadSection {
   width: 100%;
   height: 100%;
   background: var(--blue-gradient);
-  opacity: .94;
+  opacity: 0.94;
   display: flex !important;
   z-index: 100000;
   align-items: center;
   justify-content: center;
 }
-#loadSection>div>div{
+#loadSection > div > div {
   margin: 18vh 0;
 }
-#loadSection>div>div>img{
+#loadSection > div > div > img {
   width: 10rem;
 }
-#loadH1{
+#loadH1 {
   color: var(--white);
 }
-#terminalLine{
+#terminalLine {
   width: 12px;
   background: var(--yellow-gradient);
   height: 40px;
 }
-#logoAlfa{
+#logoAlfa {
   display: flex;
   width: 100vw;
   align-items: center;
   justify-content: center;
 }
-#scrollLoad{
+#scrollLoad {
   color: var(--white);
   font-weight: 600;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-#scrollLoad>a>img{
+#scrollLoad > a > img {
   width: 3rem;
 }
-.loadPage__exit-button{
+#loadPage__exit-button {
   cursor: pointer;
   border-bottom: 3px solid #fff0;
   display: flex;
   align-items: center;
-  transition: all .3s;
+  transition: all 0.3s;
   width: 10rem;
-  border-bottom: 3px solid #FFB05B;
+  border-bottom: 3px solid #ffb05b;
   justify-content: center;
 }
-#loadPage__exit-buttonDesktop:hover{
-  border-bottom: 3px solid #FFB05B;
+#loadPage__exit-buttonDesktop:hover {
+  border-bottom: 3px solid #ffb05b;
 }
