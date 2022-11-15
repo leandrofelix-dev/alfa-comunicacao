@@ -59,7 +59,7 @@
 #loadTitle > div > p {
   color: var(--white);
 }
-#loadPage {
+#load-page {
   height: 100vh;
   width: 100vw;
   background-image: url(/public/assets/img/projeto-alfa.png);
