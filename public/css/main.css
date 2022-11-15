@@ -88,13 +88,13 @@ h6,
 .uil-whatsapp,
 .uil-instagram,
 .uil-facebook {
-  color: var(--gray-100);
+  color: var(--gray-150);
   font-size: 2rem;
 }
 
 .mobile--nav-element > a > i,
 #mobile--nav-main > i {
-  color: var(--gray-100);
+  color: var(--gray-150);
   font-size: 1.6rem;
 }
 
@@ -105,7 +105,7 @@ h6,
 #mobile--nav-main {
   width: 3.4rem;
   height: 3.4rem;
-  background: var(--gray-100);
+  background: var(--gray-150);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -124,19 +124,19 @@ h6,
 }
 
 #social-links > li > a > i {
-  color: var(--gray-100);
+  color: var(--gray-150);
 }
 
 #main-mobile--right > h3,
 #main-mobile--right > h1 {
-  color: var(--gray-100);
+  color: var(--gray-150);
 }
 #main-mobile--right > h1 {
   line-height: 1.25em;
 }
 
 #main-mobile--separator {
-  border: 0.2px solid var(--gray-100);
+  border: 0.2px solid var(--gray-150);
   opacity: 0.5;
   height: 100%;
   margin: 0 1rem;
@@ -168,7 +168,7 @@ h6,
 }
 #menu-blog-button > a > i,
 #menu-blog-button > a > b {
-  color: var(--gray-100);
+  color: var(--gray-150);
   font-size: 1.2rem;
   opacity: 0.6;
 }
@@ -194,10 +194,10 @@ h6,
 }
 #main--cta-button > a > div > i {
   font-size: 2rem;
-  color: var(--gray-100);
+  color: var(--gray-150);
 }
 #main--cta-button > a > div > p {
-  color: var(--gray-100);
+  color: var(--gray-150);
   font-size: 1.2rem;
   font-weight: bold;
 }
@@ -257,15 +257,15 @@ h6,
 .section-skew .section--title,
 .section-skew .section--subtitle,
 .section-skew .section--text {
-  color: var(--gray-100);
+  color: var(--gray-150);
 }
 
 #sobre-nos {
-  margin-top: calc(2 * var(--m-2));
+  margin-top: calc(2 * var(--m-1));
 }
 
 #nossos-servicos {
-  margin-top: calc(2 * var(--m-2));
+  margin-top: calc(2 * var(--m-1));
 }
 #services {
   margin-top: var(--between-sections-margin);
@@ -289,16 +289,16 @@ h6,
 }
 .services--card-title {
   font-size: var(--text-xl);
-  color: var(--gray-100);
+  color: var(--gray-150);
   font-weight: 700;
 }
 .services--card-text {
-  color: var(--gray-100);
+  color: var(--gray-150);
   font-size: var(--text-md);
 }
 
 .services--category-item {
-  background-color: #fff;
+  background-color: var(--gray-100);
   box-shadow: var(--drop-shadow);
   font-size: var(--text-md);
   border-radius: var(--rounded-sm);
@@ -352,7 +352,7 @@ h6,
 }
 
 #instagram {
-  margin-top: calc(2 * var(--m-2));
+  margin-top: calc(2 * var(--m-1));
 }
 
 #insta-recentes {
@@ -364,7 +364,7 @@ h6,
 }
 
 .section--target > a {
-  color: var(--gray-100);
+  color: var(--gray-150);
 }
 
 .midia-box {
@@ -384,14 +384,14 @@ h6,
 /* Sessão footer */
 
 #footer {
-  margin-top: calc(3 * var(--m-2));
+  margin-top: calc(3 * var(--m-1));
   display: grid;
   flex-direction: column;
   grid-template-columns: 1em 1fr 1em;
   background: var(--blue-g);
   text-align: center;
   padding: 1.5rem 0;
-  color: var(--gray-100);
+  color: var(--gray-150);
 }
 
 #footer--wrapper {
@@ -431,7 +431,7 @@ h6,
   align-items: start;
 }
 #footer--institucional div > ul > li > a {
-  color: var(--gray-100);
+  color: var(--gray-150);
 }
 
 #footer--message {
@@ -540,7 +540,7 @@ h6,
 }
 
 #main--service {
-  margin-top: 3rem;
+  margin-top: var(--m-1);
   width: 100vw;
 }
 
@@ -559,18 +559,9 @@ h6,
 }
 
 .section--body {
-  margin: 0 2.6rem;
+  /* margin: 0 2.6rem; */
 }
 
-.section--title {
-  font-size: var(--title-size);
-  line-height: 3rem;
-}
-
-.section--text {
-  font-size: var(--text-size);
-  font-weight: 500;
-}
 
 .buttom-active {
   background: var(--yellow-g);
@@ -803,8 +794,8 @@ h6,
 /*  Sessão empresas parceiras */
 
 #empresas {
-  background: var(--gray-100);
-  margin-top: calc(2 * var(--m-2));
+  background: var(--gray-150);
+  margin-top: calc(2 * var(--m-1));
 }
 
 .empresas--pages {
@@ -883,7 +874,7 @@ h6,
 }
 
 #empresas--separator {
-  margin-top: calc(2 * var(--m-2));
+  margin-top: calc(2 * var(--m-1));
   background: var(--gray-200);
   opacity: 0.2;
   border: 1px solid var(--gray-200);
