@@ -33,7 +33,7 @@
 }
 .container p span.cursor {
   display: inline-block;
-  background-color: var(--yellow-gradient);
+  background-color: var(--yellow-g);
   margin-left: 0.1rem;
   width: 3px;
   animation: blink 1s infinite;
@@ -49,7 +49,7 @@
 }
 #wellcome__h2 {
   color: var(--white);
-  background: var(--yellow-gradient);
+  background: var(--yellow-g);
   padding: 0.6rem 2rem;
   border-radius: 0.8rem;
   text-align: center;
@@ -75,7 +75,7 @@
 #loadSection {
   width: 100%;
   height: 100%;
-  background: var(--blue-gradient);
+  background: var(--blue-g);
   opacity: 0.94;
   display: flex !important;
   z-index: 100000;
@@ -93,7 +93,7 @@
 }
 #terminalLine {
   width: 12px;
-  background: var(--yellow-gradient);
+  background: var(--yellow-g);
   height: 40px;
 }
 #logoAlfa {

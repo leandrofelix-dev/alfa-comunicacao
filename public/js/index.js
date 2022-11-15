@@ -16,8 +16,8 @@ const card_placa = document.querySelector('#service--card_placa');
 const card_servicosGraficos = document.querySelector('#service--card_servicosGraficos');
 const card_letraCaixa = document.querySelector('#service--card_letraCaixa');
 
-buttom_acm.classList.add('buttom_active');
-card_acm.classList.add('card_active');
+buttom_acm.classList.add('buttom-active');
+card_acm.classList.add('card-active');
 
 // ACM
 buttom_acm.addEventListener('click', () => {
@@ -42,11 +42,11 @@ buttom_envelopamento.addEventListener('click', () => {
 // Placas
 buttom_placa.addEventListener('click', () => {
     for (let i = 0; i < buttons.length; i++) {
-        buttons[i].classList.remove('buttom_active');
-        cards[i].classList.remove('card_active');
+        buttons[i].classList.remove('buttom-active');
+        cards[i].classList.remove('card-active');
     }
-    buttom_placa.classList.add('buttom_active');
-    card_placa.classList.add('card_active');
+    buttom_placa.classList.add('buttom-active');
+    card_placa.classList.add('card-active');
 });
 
 // Serviços Gráficos
