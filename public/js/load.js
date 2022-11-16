@@ -1,5 +1,8 @@
-const loadDiv = document.querySelector("#loadSection");
-loadDiv.style.display = "none";
+window.onload = () => {
+  location.href = "#";
+}
+
+const loadDiv = document.querySelector("#load-section");
 
 const typedTextSpan = document.querySelector(".typed-text");
 const cursorSpan = document.querySelector(".cursor");
@@ -11,16 +14,17 @@ const newTextDelay = 1200;
 let textArrayIndex = 0;
 let charIndex = 0;
 
-const scrollButton = document.querySelector('#scrollLoad')
-const loadPage = document.querySelector('#loadPage')
+const scrollButton = document.querySelector('#scroll-load')
+const loadPage = document.querySelector('#load-page')
+loadPage.addEventListener('click', () => {
+  loadPage.style.transition = "all ease-in-out 1s"
+  loadPage.style.opacity = "0"
+  loadPage.style.position = "absolute"
+  loadPage.style.zIndex = "-100000"
+  loadPage.style.marginTop = "-100%"
 
-function upLoadPage(){
-    loadPage.style.transition = "all ease-in-out 1s"
-    loadPage.style.opacity= ".75"
-    loadPage.style.position="absolute"
-    loadPage.style.marginTop="-100%"
-    loadPage.style.zIndex = "-1000"
-}
+  // window.pageYOffset = 0
+})
 
 function type() {
   if (charIndex < textArray[textArrayIndex].length) {
@@ -28,7 +32,7 @@ function type() {
     typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
     charIndex++;
     setTimeout(type, typingDelay);
-  } 
+  }
   else {
     cursorSpan.classList.remove("typing");
     setTimeout(erase, newTextDelay);
@@ -41,7 +45,7 @@ function erase() {
     typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
     charIndex--;
     setTimeout(erase, erasingDelay);
-  } 
+  }
   else {
     cursorSpan.classList.remove("typing");
     textArrayIndex++;

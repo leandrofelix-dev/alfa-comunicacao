@@ -14,6 +14,7 @@
   --yellow-g: linear-gradient(-45deg, #ffb05b, #ffc95a);
   --blue-g: linear-gradient(-45deg, #302df5, #73abff);
 
+  --text-3xl: 2.8rem;
   --text-2xl: 2.4rem;
   --text-xl: 2rem;
   --text-lg: 1rem;
@@ -22,12 +23,14 @@
 
   --drop-shadow: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07));
 
-  --rounded-md: 1rem;
   --rounded-sm: 0.4rem;
+  --rounded-md: 1rem;
+  --rounded-lg: 2.4rem;
 
   --m-1: 1rem;
 
-  --skew-y: 4deg;
+  --skew-y: 3deg;
+  --between-sections-margin: 2em;
 }
 
 /* Dark Mode */
@@ -36,8 +39,8 @@ body.dark-theme {
   --gray-800: #dbe5ff;
   --gray-300: #f5f5f5;
   --gray-200: #6a6a6a;
-  /* --gray-150: hsl(241deg 79% 8%); */
   --gray-150: #00000e;
+  --gray-100: #070712;
   --yellow-g: linear-gradient(-45deg, #ffb05b, #ffc95a);
   --blue-g: linear-gradient(-45deg, #0d0034, #2c3da3);
 }
@@ -71,9 +74,16 @@ body.dark-theme {
 .dark-theme .main--service-photos > img {
   opacity: 0.4 !important;
 }
-.dark-theme #mobile--nav-main{
+.dark-theme #mobile--nav-main {
   background: var(--yellow-g) !important;
 }
-.dark-theme .mobile--nav-list{
+.dark-theme .mobile--nav-list {
   background: var(--gray-150) !important;
+}
+.dark-theme .services--category-item {
+  background: var(--gray-150);
+  border: 1px solid #ffc95a !important;
+}
+.dark-theme .services--category-item-active {
+  background: var(--yellow-g);
 }

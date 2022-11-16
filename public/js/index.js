@@ -1,11 +1,11 @@
-
-/*==================== DARK LIGHT THEME ====================*/
+/*==================== DARK & LIGHT THEME ====================*/
 const theme_button = document.querySelector('#switch-mode-button')
 const dark_theme = 'dark-theme'
 const icon_theme = 'uil-sun'
 
 const selected_theme = localStorage.getItem('selected-theme')
 const selected_icon = localStorage.getItem('selected-icon')
+
 
 const getCurrentTheme = () => document.body.classList.contains(dark_theme) ? 'dark' : 'light'
 const getCurrentIcon = () => themeButton.classList.contains(icon_theme) ? 'uil-moon' : 'uil-sun'
@@ -15,7 +15,6 @@ if (selected_theme) {
     document.body.classList[selected_theme === 'dark' ? 'add' : 'remove'](dark_theme)
     theme_button.classList[selected_icon === 'uil-moon' ? 'add' : 'remove'](icon_theme)
 }
-console.log(theme_button)
 theme_button.addEventListener('click', () => {
     document.body.classList.toggle(dark_theme)
     theme_button.classList.toggle(icon_theme)
@@ -24,167 +23,45 @@ theme_button.addEventListener('click', () => {
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
 
-// /* Dinamização da sessão de serviços */
-// // ! Refatorar para enxugar o código
-// const buttons = document.querySelectorAll('.service--category-item');
-// const cards = document.querySelectorAll('.service--card');
+    if (window.screen.width >= 1024) {
+        const nav_desktop = document.querySelector('#desktop-nav--list')
+        nav_desktop.appendChild(theme_button)
+    }
 
-// const buttom_acm = document.querySelector('#service--buttom_acm');
-// const buttom_envelopamento = document.querySelector('#service--buttom_envelopamento');
-// const buttom_placa = document.querySelector('#service--buttom_placa');
-// const buttom_servicosGraficos = document.querySelector('#service--buttom_servicosGraficos');
-// const buttom_letraCaixa = document.querySelector('#service--buttom_letraCaixa');
+/*==================== SERVICES MENU ====================*/
+const services_button = document.querySelectorAll('.services--category-item')
+const services_box = document.querySelectorAll('.services--card')
 
-// const card_acm = document.querySelector('#service--card_acm');
-// const card_envelopamento = document.querySelector('#service--card_envelopamento');
-// const card_placa = document.querySelector('#service--card_placa');
-// const card_servicosGraficos = document.querySelector('#service--card_servicosGraficos');
-// const card_letraCaixa = document.querySelector('#service--card_letraCaixa');
+for (let i = 0; i <= 4; i++) {
+    let element_number = services_button[i].getAttribute("data-id")
 
-// buttom_acm.classList.add('buttom-active');
-// card_acm.classList.add('card-active');
+    services_button[i].addEventListener('click', () => {
+        for (let a = 0; a <= 4; a++) {
+            services_box[a].style.display = 'none'
+            services_button[a].classList.remove('services--category-item-active')
+        }
+        services_button[element_number].classList.add('services--category-item-active')
+        services_box[element_number].style.display = "grid"
+    })
+}
 
-// // ACM
-// buttom_acm.addEventListener('click', () => {
-//     for (let i = 0; i < buttons.length; i++) {
-//         buttons[i].classList.remove('buttom_active');
-//         cards[i].classList.remove('card_active');
-//     }
-//     buttom_acm.classList.add('buttom_active');
-//     card_acm.classList.add('card_active');
-// });
+/*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
+// .desktop-nav--element-active
 
-// // Envelopamento
-// buttom_envelopamento.addEventListener('click', () => {
-//     for (let i = 0; i < buttons.length; i++) {
-//         buttons[i].classList.remove('buttom_active');
-//         cards[i].classList.remove('card_active');
-//     }
-//     buttom_envelopamento.classList.add('buttom_active');
-//     card_envelopamento.classList.add('card_active');
-// });
+function activeNavElement() {
+    let scrollY = window.pageYOffset
+    let sections = document.querySelectorAll('.sections')
+    let navElements = document.querySelectorAll('.desktop-nav--element')
+    let tops = []
+    let heights = []
 
-// // Placas
-// buttom_placa.addEventListener('click', () => {
-//     for (let i = 0; i < buttons.length; i++) {
-//         buttons[i].classList.remove('buttom-active');
-//         cards[i].classList.remove('card-active');
-//     }
-//     buttom_placa.classList.add('buttom-active');
-//     card_placa.classList.add('card-active');
-// });
-
-// // Serviços Gráficos
-// buttom_servicosGraficos.addEventListener('click', () => {
-//     for (let i = 0; i < buttons.length; i++) {
-//         buttons[i].classList.remove('buttom_active');
-//         cards[i].classList.remove('card_active');
-//     }
-//     buttom_servicosGraficos.classList.add('buttom_active');
-//     card_servicosGraficos.classList.add('card_active');
-// });
-
-// // Letras Caixa
-// buttom_letraCaixa.addEventListener('click', () => {
-//     for (let i = 0; i < buttons.length; i++) {
-//         buttons[i].classList.remove('buttom_active');
-//         cards[i].classList.remove('card_active');
-//     }
-//     buttom_letraCaixa.classList.add('buttom_active');
-//     card_letraCaixa.classList.add('card_active');
-// });
-
-// // Dinamicidade da navegação do menu
-// // ! Refatorar para evitar crescimento exponencial ocasionado pelos 2 for's
-// const navElements = document.querySelectorAll('.desktopNav__element')
-
-// for (let i = 0; i < navElements.length - 1; i++) {
-//     navElements[i].addEventListener('click', () => {
-//         navElements.forEach(element => {element.classList.remove('desktopNav__element-active')})
-//         navElements[i].classList.add('desktopNav__element-active');
-//     })
-// };
-
-// // ! ORGANIZAR LÓGICA
-
-// /*
-//     * Pegar posição atual
-//     ! Pegar posição inicial de cada sessão
-//     ! Comparar posição atual com posição de cada sessão
-//     ! Ativar sessão quando posição atual for igual a posição de cada sessão
-// */
-
-// const nav_elements = document.querySelectorAll('.desktopNav__element');
-
-// const inicio = document.querySelector('#home')
-// const sobre_nos = document.querySelector('#sobre-nos')
-// const nossos_servicos = document.querySelector('#nossos-servicos')
-// const postagens = document.querySelector('#postagens')
-// const empresas_parceiras = document.querySelector('#empresas-parceiras')
-// const rodape = document.querySelector('#rodape')
-
-// window.addEventListener('scroll', () => {
-//     console.clear()
-//     const scroll = window.pageYOffset
-//     console.log("atual: " + scroll)
-
-//     const inicio__Top = inicio.offsetTop
-//     const nossos_servicos__Top = nossos_servicos.offsetTop
-//     const postagens__Top = postagens.offsetTop
-//     const empresas_parceiras__Top = empresas_parceiras.offsetTop
-//     const rodape__Top = rodape.offsetTop
-//     /*
-//     console.log("top: " + inicio__Top)
-//     console.log("nossos servicos: " + nossos_servicos__Top)
-//     console.log("postagens: " + postagens__Top)
-//     console.log("empresas parceiras: " + empresas_parceiras__Top)
-//     console.log("rodape: " + rodape__Top)
-//     */
-//     if (
-//         scroll >= inicio__Top &&
-//         scroll < nossos_servicos__Top
-//     )
-//     { nav_elements[0].classList.add('desktopNav__element-active') }
-//     else
-//     { nav_elements[0].classList.remove('desktopNav__element-active') }
-
-//     if (scroll >= nossos_servicos__Top && scroll < postagens__Top)
-//     { nav_elements[1].classList.add('desktopNav__element-active') }
-//     else
-//     { nav_elements[1].classList.remove('desktopNav__element-active') }
-
-//     if (scroll >= postagens__Top && scroll < empresas_parceiras__Top)
-//     { nav_elements[2].classList.add('desktopNav__element-active') }
-//     else
-//     { nav_elements[2].classList.remove('desktopNav__element-active') }
-
-//     if (scroll >= empresas_parceiras__Top && scroll < rodape__Top)
-//     { nav_elements[2].classList.add('desktopNav__element-active') }
-//     else
-//     { nav_elements[2].classList.remove('desktopNav__element-active') }
-
-
-// })
-
-
-
-// const elements = document.querySelectorAll('.sections')
-
-// elements.forEach(li => {
-
-//     let sectionHeight = li.offsetHeight
-//     let sectionTop = li.offsetTop -50
-//     let sectionHref = li.children[0].getAttribute('href')
-//     if (sectionHref) {
-//         sectionHref = sectionHref.slice(1, sectionHref.length)
-//         console.log(sectionHref)
-//     }
-
-//     if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-//         console.log("adicionou")
-//         document.querySelector('.desktopNav__element a[href*=' + sectionHref + ']').parentNode.classList.add('desktopNav__element-active')
-//     } else {
-//         console.log("removeu")
-//         document.querySelector('.desktopNav__element a[href*=' + sectionHref + ']').parentNode.classList.remove('desktopNav__element-active')
-//     }
-// })
+    for (let i = 0; i < sections.length; i++) {
+        tops.push(sections[i].offsetTop -100)
+        heights.push(sections[i].offsetHeight)
+    }
+    for (let a = 0; a < sections.length; a++) {
+        if (scrollY > tops[a] && scrollY < tops[a] + heights[a]) {navElements[a].classList.add('desktop-nav--element-active')}
+        else {navElements[a].classList.remove('desktop-nav--element-active')}
+    }
+}
+window.addEventListener('scroll', activeNavElement)

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="pt-br" onclick="upLoadPage()">
+<!-- <html lang="pt-br" onclick="upLoadPage()"> -->
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -11,47 +12,46 @@
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" />
     <link href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css" rel="stylesheet">
-    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"></script>
 
 
     <link rel="stylesheet" href="./public/css/main.css">
 
-    <!-- ? Verificar utilidade dessa bibliotecas no código -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
 </head>
 
-<!-- <body onclick="upLoadPage()"> -->
 <body>
     <div id="home"></div>
-    <div id="navigate-arrow"> <a href="#footer--message"><img src="./public/assets/svg/arrow.svg" alt=""></a> </div>
+    <div id="navigate-arrow">
+        <a href="#footer--message"><img src="./public/assets/svg/arrow.svg" alt=""></a>
+    </div>
 
-    <div class="section" id="loadPage">
-        <div id="loadSection" onscroll="upLoadPage()">
+    <div class="section" id="load-page">
+        <div id="load-section">
             <div>
-                <div id="logoAlfa">
+                <div id="logo-alfa">
                     <img src="./public/assets/img/loadLogo.png" alt="">
                 </div>
                 <div>
                     <div id="wellcome">
                         <h2 id="wellcome--h2">Olá, seja bem-vind@!</h2>
                     </div>
-                    <div id="loadTitle">
+                    <div id="load-title">
                         <div class="container">
                             <p>#Isso é <span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
                         </div>
                     </div>
                 </div>
-                <div id="scrollLoad">
-
-                    <a id="loadPage--exit-button" id="loadPage--exit-buttonDesktop">
+                <div id="scroll-load">
+                    <a class="load-page--exit-button" id="load-page--exit-button-desktop">
                         <i class="uil uil-mouse-alt"></i>
                         <p>Role para baixo!</p>
                     </a>
-                    <a class="loadPage--exit-button" id="loadPage--exit-buttonMobile">
+                    <a class="load-page--exit-button" id="load-page--exit-button-mobile">
                         <i class="uil uil-angle-double-up"></i>
-                        <p>Deslize</p>
+                        <p>Clique para deslizar</p>
                     </a>
                 </div>
             </div>
@@ -87,14 +87,13 @@
 
         <!-- Tela principal versão desktop -->
         <section id="desktop--home">
-
-            <nav id="desktop--nav-menu">
-                <a href="#" id="nav-img">
+            <nav id="desktop-nav--menu">
+                <a href="#" id="desktop-nav--img">
                     <img src="./public/assets/svg/logo-alfa-alt.svg" alt="Logotipo Alfa Comunicação">
                 </a>
                 <ul id="desktop-nav--list">
                     <li class="desktop-nav--element">
-                        <a href="#home">Início</a>
+                        <a href="#inicio">Início</a>
                     </li>
                     <li class="desktop-nav--element">
                         <a href="#sobre-nos">Quem somos</a>
@@ -108,13 +107,10 @@
                     <li class="desktop-nav--element">
                         <a href="#empresas-parceiras">Parceiros</a>
                     </li>
-                    <li class="desktop-nav--element">
-                        <a id="blog-button" href="https://alfa-blog.vercel.app"><b>Nosso Blog</b></a>
+                    <li class="desktop-nav--element desktop-nav--element-blog-buttonm">
+                        <a id="blog-button" href=""><b>Nosso Blog</b></a>
                     </li>
                 </ul>
-                <a class="switch-mode-button">
-                    <i class="uil uil-sun" id="theme-button"></i>
-                </a>
             </nav>
 
             <div class="main-desktop--content">
@@ -143,10 +139,10 @@
                     <header id="mobile--header-menu">
                         <ul id="header-menu">
                             <li id="menu-blog-button">
-                                <a href="https://alfa-blog.vercel.app"><i class="uil uil-notebooks"></i> <b>Blog</b></a>
+                                <a href=""><i class="uil uil-notebooks"></i> <b>Blog</b></a>
                             </li>
                             <li class="header-menu-li" id="header-menu-logo">
-                                <a href="#home"><img src="./public/assets/svg/logo-alfa.svg"
+                                <a href="#inicio"><img src="./public/assets/svg/logo-alfa.svg"
                                         alt="Logotipo Alfa Comunicação"></a>
                             </li>
                             <li id="theme-button">
@@ -177,7 +173,7 @@
 
                         <div id="main-mobile--right">
                             <h3>ALFA COMUNICAÇÃO</h3>
-                            <h1>Seus <br> serviços, <br> nossas <br> conquistas!</h1>
+                            <h1>Nossos <br> serviços, <br> suas <br> conquistas!</h1>
                         </div>
                     </div>
                     <button id="main--cta-button">
@@ -212,27 +208,31 @@
     <div class="sections section-skew" id="sobre-nos">
         <section id="about-us">
             <!-- Cabeçalho da sessão -->
-            <div class="section--header">
-                <h2 class="section--title section--rotated-title">Quem nós <br> somos?</h2>
-            </div>
-            <!-- Conteúdo da sessão -->
-            <div class="about-us--content-flex">
-                <div class="section--body ">
-                    <p class="section--text section--rotated--text">A Alfa comunicação é uma empresa que atua no
-                        ramo de comunicação visual, serviços gráficos e impressão digital. Há mais de 8 anos no mercado,
-                        nos tornamos uma empresa referência em qualidade de atendimento, serviço e prazo de entrega.
-                    </p>
+            <div class="section-skew--wrapper">
+                <div class="section--header">
+
+                    <h2 class="section--title section--rotated-title">Quem nós <br> somos?</h2>
                 </div>
-                <div>
-                    <div id="about-us--service-about-us">
-                        <ul id="about-us--service-ul">
-                            <li class="about-us--service-photos">
-                                <img src="./public/assets/img/img1.png" alt="Foto de serviço 1">
-                            </li>
-                            <li class="about-us--service-photos">
-                                <img src="./public/assets/img/img2.png" alt="Foto de serviço 2">
-                            </li>
-                        </ul>
+                <!-- Conteúdo da sessão -->
+                <div class="about-us--content-flex">
+                    <div class="section--body ">
+                        <p class="section--text section--rotated--text">A Alfa comunicação é uma empresa que atua no
+                            ramo de comunicação visual, serviços gráficos e impressão digital. Há mais de 8 anos no
+                            mercado,
+                            nos tornamos uma empresa referência em qualidade de atendimento, serviço e prazo de entrega.
+                        </p>
+                    </div>
+                    <div>
+                        <div id="about-us--service-about-us">
+                            <ul id="about-us--service-ul">
+                                <li class="about-us--service-photos">
+                                    <img src="./public/assets/img/img1.png" alt="Foto de serviço 1">
+                                </li>
+                                <li class="about-us--service-photos">
+                                    <img src="./public/assets/img/img2.png" alt="Foto de serviço 2">
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -248,81 +248,88 @@
             </div>
 
             <ul id="services--category">
-                <li class="services--category-item" id="services--buttom-acm">Serviços em ACM</li>
-                <li class="services--category-item" id="services--buttom-envelopamento">Envelopamentos</li>
-                <li class="services--category-item" id="services--buttom-placa">Placas</li>
-                <li class="services--category-item" id="services--buttom-servicos-graficos">Serviços Gráficos</li>
-                <li class="services--category-item" id="services--buttom-letras-caixa">Letras Caixa</li>
+                <li class="services--category-item services--category-item-active" id="services--buttom-acm" data-id="0" >Serviços em ACM</li>
+                <li class="services--category-item" id="services--buttom-envelopamento" data-id="1">Envelopamentos</li>
+                <li class="services--category-item" id="services--buttom-placa" data-id="2">Placas</li>
+                <li class="services--category-item" id="services--buttom-servicos-graficos" data-id="3">Serviços Gráficos</li>
+                <li class="services--category-item" id="services--buttom-letras-caixa" data-id="4">Letras Caixa</li>
             </ul>
 
-            <div class="services--category-box" >
+            <div class="services--category-box">
                 <div class="services--card" id="services--card-acm">
-                <div class="services--card-image">
-                    <img src="./public/assets/img/services-card-1.png" alt="">
+                    <div class="services--card-image">
+                        <img src="./public/assets/img/servicos/acm.png" alt="">
+                    </div>
+                    <div class="services--card-info">
+                        <h5 class="services--card-title">ACM</h5>
+                        <p class="services--card-text">Os serviços em ACM são formados por revestimentos em Alumínio
+                            Composto, que em inglês é Aluminum
+                            Composite Material, termo original da sigla ACM. Trata-se de um material formado por duas
+                            chapas
+                            de alumínio pintado, com um núcleo de plástico polietileno, produzido dentro dos padrões de
+                            tecnologia ISO 9001; 2000.</p>
+                    </div>
                 </div>
-                <div class="services--card-info">
-                    <h5 class="services--card-title">ACM</h5>
-                    <p class="services--card-text">Os serviços em ACM são formados por revestimentos em Alumínio
-                        Composto, que em inglês é Aluminum
-                        Composite Material, termo original da sigla ACM. Trata-se de um material formado por duas chapas
-                        de alumínio pintado, com um núcleo de plástico polietileno, produzido dentro dos padrões de
-                        tecnologia ISO 9001; 2000.</p>
+                <div class="services--card" id="services--card-envelopamento">
+                    <div class="services--card-image">
+                        <img src="./public/assets/img/servicos/envelopamentos.jpg" alt="">
+                    </div>
+                    <div class="services--card-info">
+                        <h5 class="services--card-title">Envelopamentos</h5>
+                        <p class="services--card-text">O envelopamento é uma técnica utilizada tanto por razões
+                            estéticas,
+                            quanto para a preservação da
+                            pintura do veículo. Para realizar este processo, é utilizada uma película adesiva com
+                            propriedades de aderência, foscalização ou cores sobre a pintura original. que pode cobrir
+                            uma
+                            parte específica do carro ou todo o exterior.
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div class="services--card" id="services--card-envelopamento">
-                <div class="services--card-image">
-                    <img src="./public/assets/img/services-card-1.png" alt="">
+                <div class="services--card" id="services--card-placa">
+                    <div class="services--card-image">
+                        <img src="./public/assets/img/servicos/placas.jpg" alt="">
+                    </div>
+                    <div class="services--card-info">
+                        <h5 class="services--card-title">Placas</h5>
+                        <p class="services--card-text">Quando aplicados corretamente e com uma estratégia clara, as
+                            placas
+                            podem ter um enorme impacto
+                            nas suas necessidades de marketing. Eles podem enviar sinais ambientais, destacar promoções
+                            e
+                            ofertas ou presentear os clientes. A Alfa oferece painéis de lona, adesivada e com fundo de
+                            zinco que são duráveis ​​e resistentes.
+                        </p>
+                    </div>
                 </div>
-                <div class="services--card-info">
-                    <h5 class="services--card-title">Envelopamentos</h5>
-                    <p class="services--card-text">O envelopamento é uma técnica utilizada tanto por razões estéticas,
-                        quanto para a preservação da
-                        pintura do veículo. Para realizar este processo, é utilizada uma película adesiva com
-                        propriedades de aderência, foscalização ou cores sobre a pintura original. que pode cobrir uma
-                        parte específica do carro ou todo o exterior.
-                    </p>
+                <div class="services--card" id="services--card-servicos-graficos">
+                    <div class="services--card-image">
+                        <img src="./public/assets/img/servicos/servicos-graficos.jpg" alt="">
+                    </div>
+                    <div class="services--card-info">
+                        <h5 class="services--card-title">Serviços gráficos</h5>
+                        <p class="services--card-text">Os serviços em ACM são formados por revestimentos em Alumínio
+                            Composto, que em inglês é Aluminum
+                            Composite Material, termo original da sigla ACM. Trata-se de um material formado por duas
+                            chapas
+                            de alumínio pintado, com um núcleo de plástico polietileno, produzido dentro dos padrões de
+                            tecnologia ISO 9001; 2000.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="services--card" id="services--card-placa">
-                <div class="services--card-image">
-                    <img src="./public/assets/img/services-card-1.png" alt="">
+                <div class="services--card" id="services--card-letras-caixa">
+                    <div class="services--card-image">
+                        <img src="./public/assets/img/servicos/letras-caixa.jpg" alt="">
+                    </div>
+                    <div class="services--card-info">
+                        <h5 class="services--card-title">Letras-caixa</h5>
+                        <p class="services--card-text">As letras caixa são utilizadas para formar ambientes externos
+                            (como
+                            paredes externas de empresas,
+                            lojas e shoppings) e ambientes internos (como eventos e festas). Utilizá-las representa
+                            benefícios como valorização da fachada e da marca, maior impacto perante o público, alta
+                            durabilidade, versatilidade.</p>
+                    </div>
                 </div>
-                <div class="services--card-info">
-                    <h5 class="services--card-title">Placas</h5>
-                    <p class="services--card-text">Quando aplicados corretamente e com uma estratégia clara, as placas
-                        podem ter um enorme impacto
-                        nas suas necessidades de marketing. Eles podem enviar sinais ambientais, destacar promoções e
-                        ofertas ou presentear os clientes. A Alfa oferece painéis de lona, adesivada e com fundo de
-                        zinco que são duráveis ​​e resistentes.
-                    </p>
-                </div>
-            </div>
-            <div class="services--card" id="services--card-servicos-graficos">
-                <div class="services--card-image">
-                    <img src="./public/assets/img/services-card-1.png" alt="">
-                </div>
-                <div class="services--card-info">
-                    <h5 class="services--card-title">Serviços gráficos</h5>
-                    <p class="services--card-text">Os serviços em ACM são formados por revestimentos em Alumínio
-                        Composto, que em inglês é Aluminum
-                        Composite Material, termo original da sigla ACM. Trata-se de um material formado por duas chapas
-                        de alumínio pintado, com um núcleo de plástico polietileno, produzido dentro dos padrões de
-                        tecnologia ISO 9001; 2000.</p>
-                </div>
-            </div>
-            <div class="services--card" id="services--card-letras-caixa">
-                <div class="services--card-image">
-                    <img src="./public/assets/img/services-card-1.png" alt="">
-                </div>
-                <div class="services--card-info">
-                    <h5 class="services--card-title">Letras-caixa</h5>
-                    <p class="services--card-text">As letras caixa são utilizadas para formar ambientes externos (como
-                        paredes externas de empresas,
-                        lojas e shoppings) e ambientes internos (como eventos e festas). Utilizá-las representa
-                        benefícios como valorização da fachada e da marca, maior impacto perante o público, alta
-                        durabilidade, versatilidade.</p>
-                </div>
-            </div>
             </div>
 
         </section>
@@ -331,16 +338,18 @@
     <!-- * Sessão instagram -->
     <div class="sections" id="postagens">
         <section id="instagram" class="section-skew">
+            <div class="section-skew--wrapper">
                 <div class="section--header">
-                        <h2 class="section--title">Postagens recentes</h2>
-                        <h6 class="section--subtitle">Siga-nos no instagram <br>e fique por dentro do nosso
-                            dia-a-dia!
-                        </h6>
+                    <h2 class="section--title">Postagens recentes</h2>
+                    <h6 class="section--subtitle">Siga-nos no instagram <br>e fique por dentro do nosso
+                        dia-a-dia!
+                    </h6>
                 </div>
                 <div id="insta-recentes">
                 </div>
                 <h4 class="section--target"><a href="http://instagram.com/alfacomunicacao_va"
                         target="_blank"></i>@alfacomunicacao_va</a></h4>
+            </div>
         </section>
     </div>
 
@@ -355,66 +364,67 @@
             </div>
             <div id="empresas--list">
 
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <li class="empresas--icons ">
-                            <img src="./public/assets/img/parceiros/sq.png" alt="logo sq atacarejo">
-                        </li>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <li class="empresas--icons ">
+                                <img src="./public/assets/img/parceiros/sq.png" alt="logo sq atacarejo">
+                            </li>
+                        </div>
+                        <div class="swiper-slide">
+                            <li class="empresas--icons ">
+                                <img src="./public/assets/img/parceiros/bf.png" alt="logo boi forte">
+                            </li>
+                        </div>
+                        <div class="swiper-slide">
+                            <li class="empresas--icons ">
+                                <img src="./public/assets/img/parceiros/correios.png" alt="logo correios ">
+                            </li>
+                        </div>
+                        <div class="swiper-slide">
+                            <li class="empresas--icons ">
+                                <img src="./public/assets/img/parceiros/alan.png" alt="logo drogaria alan">
+                            </li>
+                        </div>
+                        <div class="swiper-slide">
+                            <li class="empresas--icons ">
+                                <img src="./public/assets/img/parceiros/fcap.png" alt="logo fortcap">
+                            </li>
+                        </div>
+                        <div class="swiper-slide">
+                            <li class="empresas--icons ">
+                                <img src="./public/assets/img/parceiros/afap.png" alt="logo afap">
+                            </li>
+                        </div>
+                        <div class="swiper-slide">
+                            <li class="empresas--icons ">
+                                <img src="./public/assets/img/parceiros/mdl.png" alt="logo mundo de led">
+                            </li>
+                        </div>
+                        <div class="swiper-slide">
+                            <li class="empresas--icons ">
+                                <img src="./public/assets/img/parceiros/sf.png" alt="logo super farma">
+                            </li>
+                        </div>
+                        <div class="swiper-slide">
+                            <li class="empresas--icons "><img src="./public/assets/img/parceiros/f4.png"
+                                    alt="logo f4 laboratório">
+                            </li>
+                        </div>
+                        <div class="swiper-slide">
+                            <li class="empresas--icons ">
+                                <img src="./public/assets/img/parceiros/fbe.png" alt="logo farmácia bem estar">
+                            </li>
+                        </div>
+                        <div class="swiper-slide">
+                            <li class="empresas--icons">
+                                <img src="./public/assets/img/parceiros/lg.png" alt="logo lab gouveia">
+                            </li>
+                        </div>
                     </div>
-                    <div class="swiper-slide">
-                        <li class="empresas--icons ">
-                            <img src="./public/assets/img/parceiros/bf.png" alt="logo boi forte">
-                        </li></div>
-                    <div class="swiper-slide">
-                        <li class="empresas--icons ">
-                            <img src="./public/assets/img/parceiros/correios.png"
-                                    alt="logo correios ">
-                        </li>
-                    </div>
-                    <div class="swiper-slide">
-                        <li class="empresas--icons ">
-                            <img src="./public/assets/img/parceiros/alan.png" alt="logo drogaria alan">
-                        </li>
-                    </div>
-                    <div class="swiper-slide">
-                        <li class="empresas--icons ">
-                            <img src="./public/assets/img/parceiros/fcap.png" alt="logo fortcap">
-                        </li>
-                    </div>
-                    <div class="swiper-slide">
-                        <li class="empresas--icons ">
-                            <img src="./public/assets/img/parceiros/afap.png" alt="logo afap">
-                        </li>
-                    </div>
-                    <div class="swiper-slide">
-                        <li class="empresas--icons ">
-                            <img src="./public/assets/img/parceiros/mdl.png" alt="logo mundo de led">
-                        </li>
-                    </div>
-                    <div class="swiper-slide">
-                        <li class="empresas--icons ">
-                            <img src="./public/assets/img/parceiros/sf.png" alt="logo super farma">
-                        </li>
-                    </div>
-                    <div class="swiper-slide">
-                        <li class="empresas--icons "><img src="./public/assets/img/parceiros/f4.png" alt="logo f4 laboratório">
-                        </li>
-                    </div>
-                    <div class="swiper-slide">
-                        <li class="empresas--icons ">
-                            <img src="./public/assets/img/parceiros/fbe.png" alt="logo farmácia bem estar">
-                        </li>
-                    </div>
-                    <div class="swiper-slide">
-                        <li class="empresas--icons">
-                            <img src="./public/assets/img/parceiros/lg.png" alt="logo lab gouveia">
-                        </li>
-                    </div>
+                    <hr id="empresas--separator">
+                    <div class="swiper-pagination">aaaaaaa</div>
                 </div>
-                <hr id="empresas--separator">
-                <div class="swiper-pagination">aaaaaaa</div>
-            </div>
 
         </section>
     </div>
@@ -467,8 +477,8 @@
                     </div>
                 </div>
             </div>
+            <div id="mobile-map"></div>
         </section>
-        <div id="mobile-map"></div>
     </div>
     <!-- * Sessão message -->
     <section id="footer--message">
@@ -489,7 +499,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
 
-                <!-- Slider main container -->
+    <!-- Slider main container -->
     <!-- Swiper -->
 
 </body>

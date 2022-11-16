@@ -1,13 +1,11 @@
 var swiper = new Swiper(".mySwiper", {
         direction: 'horizontal',
-        loop: true,
-        slidesPerView: 3,
-        spaceBetween: 30,
-        slidesPerGroup: 1,
         autoplay: {
-          delay: 2300,
+          delay: 5000,
         },
-        loopFillGroupWithBlank: true,
+        loop: true,
+    slidesPerView: 3,
+        slidesPerGroup: 3,
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
