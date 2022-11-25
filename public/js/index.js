@@ -1,88 +1,83 @@
-const sections = document.querySelectorAll('section[id]')
+/*==================== DARK & LIGHT THEME ====================*/
+const theme_button = document.querySelector('#switch-mode-button')
+const dark_theme = 'dark-theme'
+const icon_theme = 'uil-sun'
 
-function scrollActive() {
-    const scrollY = window.pageYOffset
+const selected_theme = localStorage.getItem('selected-theme')
+const selected_icon = localStorage.getItem('selected-icon')
 
-    sections.forEach(current => {
-        const sectionHeight = current.offsetHeight
-        const sectionTop = current.offsetTop - 50;
-        sectionId = current.getAttribute('id')
 
-        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
-        } else {
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
+const getCurrentTheme = () => document.body.classList.contains(dark_theme) ? 'dark' : 'light'
+const getCurrentIcon = () => themeButton.classList.contains(icon_theme) ? 'uil-moon' : 'uil-sun'
+
+
+if (selected_theme) {
+    document.body.classList[selected_theme === 'dark' ? 'add' : 'remove'](dark_theme)
+    theme_button.classList[selected_icon === 'uil-moon' ? 'add' : 'remove'](icon_theme)
+}
+theme_button.addEventListener('click', () => {
+    document.body.classList.toggle(dark_theme)
+    theme_button.classList.toggle(icon_theme)
+
+    localStorage.setItem('selected-theme', getCurrentTheme())
+    localStorage.setItem('selected-icon', getCurrentIcon())
+})
+
+    if (window.screen.width >= 1024) {
+        const nav_desktop = document.querySelector('#desktop-nav--list')
+        nav_desktop.appendChild(theme_button)
+    }
+
+/*==================== SERVICES MENU ====================*/
+const services_button = document.querySelectorAll('.services--category-item')
+const services_box = document.querySelectorAll('.services--card')
+
+for (let i = 0; i <= 5; i++) {
+    let element_number = services_button[i].getAttribute("data-id")
+
+    services_button[i].addEventListener('click', () => {
+        for (let a = 0; a <= 5; a++) {
+            services_box[a].style.display = 'none'
+            services_button[a].classList.remove('services--category-item-active')
         }
+        services_button[element_number].classList.add('services--category-item-active')
+        services_box[element_number].style.display = "grid"
     })
 }
 
-    /* Dinamização da sessão de serviços */
+/*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
+// .desktop-nav--element-active
 
-    const buttons = document.querySelectorAll('.service--category-item');
-    const cards = document.querySelectorAll('.service--card');
+function activeNavElement() {
+    let scrollY = window.pageYOffset
+    let sections = document.querySelectorAll('.sections')
+    let navElements = document.querySelectorAll('.desktop-nav--element')
+    let tops = []
+    let heights = []
 
-    
-    const buttom_acm = document.querySelector('#service--buttom_acm');
-    const buttom_envelopamento = document.querySelector('#service--buttom_envelopamento');
-    const buttom_placa = document.querySelector('#service--buttom_placa');
-    const buttom_servicosGraficos = document.querySelector('#service--buttom_servicosGraficos');
-    const buttom_letraCaixa = document.querySelector('#service--buttom_letraCaixa');
-    
-    const card_acm = document.querySelector('#service--card_acm');
-    const card_envelopamento = document.querySelector('#service--card_envelopamento');
-    const card_placa = document.querySelector('#service--card_placa');
-    const card_servicosGraficos = document.querySelector('#service--card_servicosGraficos');
-    const card_letraCaixa = document.querySelector('#service--card_letraCaixa');
-    
-    buttom_acm.classList.add('buttom_active');
-    card_acm.classList.add('card_active');
+    for (let i = 0; i < sections.length; i++) {
+        tops.push(sections[i].offsetTop -100)
+        heights.push(sections[i].offsetHeight)
+    }
+    for (let a = 0; a < sections.length; a++) {
+        if (scrollY > tops[a] && scrollY < tops[a] + heights[a]) {navElements[a].classList.add('desktop-nav--element-active')}
+        else {navElements[a].classList.remove('desktop-nav--element-active')}
+    }
 
-    // ACM
-    buttom_acm.addEventListener('click', () => {
-        for (let i = 0; i < buttons.length; i++) {
-            buttons[i].classList.remove('buttom_active');
-            cards[i].classList.remove('card_active');
-        }
-        buttom_acm.classList.add('buttom_active');
-        card_acm.classList.add('card_active');
-    });
+    if(scrollY >= sections[3].offsetHeight + sections[3].offsetTop - 100) {
+        document.querySelector('#navigate-arrow').style.transition = 'all 0.3s ease-in-out'
+        document.querySelector('#navigate-arrow').style.right = '-10rem'
+    }
+    else {
+        document.querySelector('#navigate-arrow').style.right = '1.4rem'
+    }
 
-    // Envelopamento
-    buttom_envelopamento.addEventListener('click', () => {
-        for (let i = 0; i < buttons.length; i++) {
-            buttons[i].classList.remove('buttom_active');
-            cards[i].classList.remove('card_active');
-        }
-        buttom_envelopamento.classList.add('buttom_active');
-        card_envelopamento.classList.add('card_active');
-    });
+}
+window.addEventListener('scroll', activeNavElement)
 
-    // Placas
-    buttom_placa.addEventListener('click', () => {
-        for (let i = 0; i < buttons.length; i++) {
-            buttons[i].classList.remove('buttom_active');
-            cards[i].classList.remove('card_active');
-        }
-        buttom_placa.classList.add('buttom_active');
-        card_placa.classList.add('card_active');
-    });
-
-    // Serviços Gráficos
-    buttom_servicosGraficos.addEventListener('click', () => {
-        for (let i = 0; i < buttons.length; i++) {
-            buttons[i].classList.remove('buttom_active');
-            cards[i].classList.remove('card_active');
-        }
-        buttom_servicosGraficos.classList.add('buttom_active');
-        card_servicosGraficos.classList.add('card_active');
-    });
-
-    // Letras Caixa
-    buttom_letraCaixa.addEventListener('click', () => {
-        for (let i = 0; i < buttons.length; i++) {
-            buttons[i].classList.remove('buttom_active');
-            cards[i].classList.remove('card_active');
-        }
-        buttom_letraCaixa.classList.add('buttom_active');
-        card_letraCaixa.classList.add('card_active');
-    });
+document.querySelector('#blog-button').addEventListener('mouseenter', () => {
+    document.querySelector('#blog-button').innerText = 'Em breve...'
+})
+document.querySelector('#blog-button').addEventListener('mouseout', () => {
+    document.querySelector('#blog-button').innerText = 'Nosso blog'
+})
