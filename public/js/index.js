@@ -32,11 +32,11 @@ theme_button.addEventListener('click', () => {
 const services_button = document.querySelectorAll('.services--category-item')
 const services_box = document.querySelectorAll('.services--card')
 
-for (let i = 0; i <= 4; i++) {
+for (let i = 0; i <= 5; i++) {
     let element_number = services_button[i].getAttribute("data-id")
 
     services_button[i].addEventListener('click', () => {
-        for (let a = 0; a <= 4; a++) {
+        for (let a = 0; a <= 5; a++) {
             services_box[a].style.display = 'none'
             services_button[a].classList.remove('services--category-item-active')
         }
@@ -63,5 +63,21 @@ function activeNavElement() {
         if (scrollY > tops[a] && scrollY < tops[a] + heights[a]) {navElements[a].classList.add('desktop-nav--element-active')}
         else {navElements[a].classList.remove('desktop-nav--element-active')}
     }
+
+    if(scrollY >= sections[3].offsetHeight + sections[3].offsetTop - 100) {
+        document.querySelector('#navigate-arrow').style.transition = 'all 0.3s ease-in-out'
+        document.querySelector('#navigate-arrow').style.right = '-10rem'
+    }
+    else {
+        document.querySelector('#navigate-arrow').style.right = '1.4rem'
+    }
+
 }
 window.addEventListener('scroll', activeNavElement)
+
+document.querySelector('#blog-button').addEventListener('mouseenter', () => {
+    document.querySelector('#blog-button').innerText = 'Em breve...'
+})
+document.querySelector('#blog-button').addEventListener('mouseout', () => {
+    document.querySelector('#blog-button').innerText = 'Nosso blog'
+})

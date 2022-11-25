@@ -1,4 +1,4 @@
-const token = 'IGQVJVZAS1sb1lNSHRQbVlJelp3ci1sdVVsS0lvYmxYaGU4ZAVRDWVpjQ3djTUxFSmo4cmFRSnpEN1pZARFc0cUQ5d01mWFdDdHBKcG5nNFhmcUdZAZAm9xRDlfNk91Wm5PODFzTThJbTBFd3htSFdWWURZATQZDZD';
+const token = '';
 const url = "https://graph.instagram.com/me/media?access_token=" + token + "&fields=media_url,media_type,permalink";
 
 fetch(url)
