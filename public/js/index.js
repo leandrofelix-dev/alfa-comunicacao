@@ -81,3 +81,10 @@ document.querySelector('#blog-button').addEventListener('mouseenter', () => {
 document.querySelector('#blog-button').addEventListener('mouseout', () => {
     document.querySelector('#blog-button').innerText = 'Nosso blog'
 })
+
+document.querySelector('#menu-blog-button').addEventListener('click', () => {
+    document.querySelector('#menu-blog-button > a b').innerText = 'Em breve...'
+    setTimeout(() => {
+        document.querySelector('#menu-blog-button > a b').innerText = 'Blog'
+    }, 1000);
+})
