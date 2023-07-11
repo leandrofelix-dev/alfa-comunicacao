@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- <html lang="pt-br" onclick="upLoadPage()"> -->
 <html lang="pt-br">
 
 <head>
@@ -10,25 +9,32 @@
 
     <title>Nossos serviços, suas conquistas | Alfa Comunicação</title>
 
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" />
-    <link href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"></script>
-
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" />
 
     <link rel="stylesheet" href="./public/css/main.css">
 
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- GTAG Analitics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4B95YHPP98"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {dataLayer.push(arguments);} gtag('js', new Date());
+        gtag('config', 'G-4B95YHPP98');
+    </script>
 
 </head>
 
 <body>
     <div id="home"></div>
     <div id="navigate-arrow">
-        <a href="#footer--message"><img src="./public/assets/svg/arrow.svg" alt=""></a>
+        <a href="#footer--message"><img src="./public/assets/svg/arrow.svg" alt="footer--message"></a>
     </div>
 
-    <!-- * Mobile Botton Nav -->
+    <!-- * Mobile Bottom Nav -->
     <nav class="mobile--nav">
         <ul class="mobile--nav-list">
             <li class="mobile--nav-element">
@@ -72,7 +78,7 @@
                         <a href="#nossos-servicos">Serviços</a>
                     </li>
                     <li class="desktop-nav--element">
-                        <a href="#postagens">Fotos</a>
+                        <a href="#galery">Fotos</a>
                     </li>
                     <li class="desktop-nav--element">
                         <a href="#empresas-parceiras">Parceiros</a>
@@ -85,7 +91,7 @@
 
             <div class="main-desktop--content">
                 <div class="main-desktop--left">
-                    <h4 class="section--target">ALFA COMUNICAÇÃO</h4>
+                    <h4 class="section--target" id="hero-target">ALFA COMUNICAÇÃO</h4>
                     <h1 class="main--slogan">Nossos serviços, <br> suas <br> conquistas!</h1>
                     <div class="main-desktop--cta-button">
                         <a href="#nossos-servicos">
@@ -214,7 +220,7 @@
         <section id="services">
             <div class="section--header">
                 <h2 class="section--title">Nossos Serviços</h2>
-                <h6 class="section--subtitle">Veja os serviços prestados por nós</h6>
+                <h6 class="section--subtitle">Veja os serviços que fazemos</h6>
             </div>
 
             <ul id="services--category">
@@ -311,6 +317,73 @@
         </section>
     </div>
 
+    <!-- * Galeria -->
+    <div class="sections" id="galery">
+        <section id="fotos">
+            <div class="section--header">
+                <h2 class="section--title">Galeria de serviços</h2>
+                <h6 class="section--subtitle">Uma amostra do nosso trabalho</h6>
+            </div>
+
+            <div class="galery--menu">
+                <div id="galery--menu-varzea-alegre" class="galery--menu-active">
+                    <i class="uil uil-location-point"></i> 
+                    <span>Várzea Alegre</span>
+                </div>
+                <div id="galery--menu-cedro">
+                    <i class="uil uil-location-point"></i>
+                    <span>Cedro</span>
+                </div>
+                <div id="galery--menu-lavras-da-mangabeira">
+                    <i class="uil uil-location-point"></i>
+                    <span>Lavras da Mangabeira</span>
+                </div>
+                <div id="galery--menu-iguatu">
+                    <i class="uil uil-location-point"></i>
+                    <span>Iguatu</span>
+                </div>
+                <div id="galery--menu-ico">
+                    <i class="uil uil-location-point"></i>
+                    <span>Icó</span>
+                </div>
+                <div id="galery--menu-juazeiro-do-norte">
+                    <i class="uil uil-location-point"></i>
+                    <span>Juazeiro do Norte</span>
+                </div>
+                <div id="galery--menu-jaguaribe">
+                    <i class="uil uil-location-point"></i>
+                    <span>Jaguaribe</span>
+                </div>
+
+            </div>
+
+            <div class="galery-photos">
+                <div class="galery-container">
+                    <div class="galery-item">
+                        <img src="https://picsum.photos/420/300" alt="">
+                    </div>
+                    <div class="galery-item">
+                        <img src="https://picsum.photos/420/300" alt="">
+                    </div>
+                    <div class="galery-item">
+                        <img src="https://picsum.photos/420/300" alt="">
+                    </div>
+                    <div class="galery-item">
+                        <img src="https://picsum.photos/420/300" alt="">
+                    </div>
+                    <div class="galery-item">
+                        <img src="https://picsum.photos/420/300" alt="">
+                    </div>
+                    <div class="galery-item">
+                        <img src="https://picsum.photos/420/300" alt="">
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+    </div>
+
     <!-- * Sessão instagram -->
     <div class="sections" id="postagens">
         <section id="instagram" class="section-skew">
@@ -323,8 +396,13 @@
                 </div>
                 <div id="insta-recentes">
                 </div>
-                <h4 class="section--target"><a href="http://instagram.com/alfacomunicacao_va"
-                        target="_blank"></i>@alfacomunicacao_va</a></h4>
+                <h4 class="section--target">
+                    <a
+                    href="http://instagram.com/alfacomunicacao_va"
+                    target="_blank">
+                        @alfacomunicacao_va
+                    </a>
+                </h4>
             </div>
         </section>
     </div>
@@ -332,7 +410,6 @@
     <!-- * Sessão empresas -->
     <div class="sections" id="empresas-parceiras">
         <section id="empresas">
-            <!-- ! Criar carrossel com 3 empresas por página -->
             <div class="section--header" id="empresas--header">
                 <h2 class="section--title">Empresas parceiras</h2>
                 <h6 class="section--subtitle">Conheça algumas empresas que conhecem e confiam no nosso trabalho.
@@ -399,7 +476,7 @@
                         </div>
                     </div>
                     <hr id="empresas--separator">
-                    <div class="swiper-pagination">aaaaaaa</div>
+                    <div class="swiper-pagination"></div>
                 </div>
 
         </section>
@@ -440,7 +517,7 @@
                         <ul>
                             <li><a href="#home">Início</a></li>
                             <li><a href="#sobre-nos">Sobre nós</a></li>
-                            <li><a href="#rodape">Contato</a></li>
+                            <li><a href="https://api.whatsapp.com/send/?phone=%2B558821321609&text&type=phone_number&app_absent=0" target="_blank">Contato</a></li>
                         </ul>
                     </div>
                 </div>
@@ -450,26 +527,21 @@
     </div>
     <!-- * Sessão message -->
     <section id="footer--message">
-        <p>@ 2022 Alfa Comunicação Visual. Todos os direitos reservados. Feito com 💙 por <a
-                href="https://github.com/lehinfo-felix"><b>Leandro Félix</b></a></p>
+        <p>@ 2023 Alfa Comunicação Visual. Todos os direitos reservados. Feito com 💙 por
+            <a
+                href="https://github.com/lehinfo-felix"
+                target="_blank">
+            <b>Leandro Félix</b></a>
+        </p>
     </section>
     </div>
 
-
-
-    <!-- Scripts Locais -->
     <script src="./public/js/swiper.js"></script>
     <script src="./public/js/index.js"></script>
-    <script src="./public/js/load.js"></script>
     <script src="./public/js/api.js"></script>
     <script src="./public/js/map.js"></script>
-    <!-- Swiper JS -->
+
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
-
-    <!-- Slider main container -->
-    <!-- Swiper -->
-
 </body>
-
 </html>

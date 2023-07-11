@@ -355,12 +355,13 @@ h6,
   padding: 0.6rem;
   white-space: nowrap;
   cursor: pointer;
+  font-weight: bold
 }
 
 .services--card {
-  margin: 2rem 1em 0 1em;
-  border-radius: var(--rounded-lg);
   background: var(--blue-g);
+  border-radius: var(--rounded-lg);
+  margin: 2rem 1em 0 1em;
   grid-template-columns: 1fr;
   grid-template-rows: minmax(1fr, 340px) 1fr;
   display: none;
@@ -517,10 +518,10 @@ h6,
   background: var(--yellow-500);
   word-wrap: break-word;
   padding-bottom: 6rem !important;
-  max-width: clamp(768px, 100vw, 1500px);
+  max-width: clamp(768px, 100vw, 100vw);
   margin: 0 auto;
 }
-#footer--message > a > b {
+#footer--message a b {
   color: var(--gray-150);
 }
 
@@ -544,8 +545,6 @@ h6,
   background: var(--yellow-g);
   color: var(--white);
 }
-
-/* ========================================================================== */
 
 #main {
   padding-bottom: 3rem;
@@ -609,6 +608,9 @@ h6,
 #main--service {
   margin-top: var(--m-1);
   width: 100vw;
+}
+#hero-target{
+  text-align: left;
 }
 
 /* Estilização padrão das Sessões */
@@ -761,8 +763,72 @@ h6,
 #desktop-nav--menu {
   width: 100vw;
 }
+#galery{
+  margin-top: calc(2 * var(--m-1));
+}
+.galery--menu-separator{
+  background: var(--gray-200);
+  width: 1px;
+  height: 100%;
+  margin: .5rem 0
+}
+.galery--menu{
+  overflow-x: scroll !important;
+  padding-bottom: .5rem;
+  width: 100%;
+  display: flex;
+  margin: 1rem 0;
+  padding-left: 1.4rem;
+}
+.galery--menu div {
+  margin: 0 .5rem;
+  display: flex;
+  cursor: pointer;
+  border: 1.5px solid var(--blue-300);
+  padding: .6rem;
+  padding-left: .2rem;
+  color: var(--gray-800);
+  border-radius: var(--rounded-sm);
+}
+.galery--menu-active {
+  background: var(--blue-g);
+  border: 1px solid transparent !important;
+  color: #fff !important;
+
+}
+.galery--menu i{
+  margin: 0 .5rem;
+}
+.galery--menu span {
+  font-weight: bold;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.galery-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 2rem;
+  grid-gap: 10px
+}
+
+.galery-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.galery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--rounded-sm);
+}
 
 @media (min-width: 768px) {
+  .galery-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
   .mobile--nav {
     display: flex;
     align-items: center;
@@ -812,9 +878,9 @@ h6,
     width: 100%;
     height: 100%;
     display: grid;
-    max-width: 90vw;
     border-radius: var(--rounded-md);
-    grid-template-columns: minmax(150px, 3fr) 7fr;
+    max-width: 90vw;
+    grid-template-columns: minmax(40px, 2fr) 7fr;
     grid-template-rows: 1fr;
   }
 
@@ -822,6 +888,7 @@ h6,
     height: 100%;
     padding: 1em;
     border-radius: calc(2 * var(--rounded-md));
+    min-width: 12rem;
   }
   #footer--message {
     padding-bottom: 1.6rem !important;
@@ -830,13 +897,12 @@ h6,
     display: none;
   }
 }
-
 @media (min-width: 1024px) {
   :root {
     --skew-y: 2deg;
   }
   .services--card-info {
-    align-items: start;
+    align-items: left;
     justify-content: center;
     display: flex;
     flex-direction: column;
@@ -844,7 +910,6 @@ h6,
   .services--card-image {
     display: flex;
     align-items: center;
-    justify-content: center;
   }
   .services--card-image > img {
     max-width: 20rem;
@@ -913,13 +978,12 @@ h6,
     margin-bottom: auto;
     margin-left: auto;
     border-radius: var(--rounded-md);
-
-    /* grid-column: 1; */
   }
 
   .main-desktop--content {
+    max-width: 960px;
+    min-width: 800px;
     margin-top: calc(var(--m-1) * 2);
-    max-width: 100rem !important;
     width: 64vw;
     background: var(--blue-g);
     border-radius: 4rem 20rem 20rem 12rem;
@@ -969,7 +1033,6 @@ h6,
     border: 2px solid transparent;
     margin: 0.4em;
     transition: all 0.2s ease-in-out;
-    /* background: red */
   }
   .desktop-nav--element a {
     color: var(--gray-300);
@@ -982,12 +1045,10 @@ h6,
     border: none !important;
   }
 }
-
 @media (min-width: 2560px) {
   :root {
     --skew-y: 1deg;
   }
-
   .section-skew--wrapper::before {
     content: "";
     position: absolute;

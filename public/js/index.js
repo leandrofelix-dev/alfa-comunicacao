@@ -1,4 +1,3 @@
-/*==================== DARK & LIGHT THEME ====================*/
 const theme_button = document.querySelector('#switch-mode-button')
 const dark_theme = 'dark-theme'
 const icon_theme = 'uil-sun'
@@ -6,10 +5,8 @@ const icon_theme = 'uil-sun'
 const selected_theme = localStorage.getItem('selected-theme')
 const selected_icon = localStorage.getItem('selected-icon')
 
-
 const getCurrentTheme = () => document.body.classList.contains(dark_theme) ? 'dark' : 'light'
 const getCurrentIcon = () => themeButton.classList.contains(icon_theme) ? 'uil-moon' : 'uil-sun'
-
 
 if (selected_theme) {
     document.body.classList[selected_theme === 'dark' ? 'add' : 'remove'](dark_theme)
@@ -46,7 +43,6 @@ for (let i = 0; i <= 5; i++) {
 }
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
-// .desktop-nav--element-active
 
 function activeNavElement() {
     let scrollY = window.pageYOffset
