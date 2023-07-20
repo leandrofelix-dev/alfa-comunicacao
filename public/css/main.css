@@ -2,7 +2,6 @@
 @import url("https://unicons.iconscout.com/release/v4.0.0/css/line.css");
 
 @import "./global.css";
-@import "./load.css";
 
 * {
   font-family: "Poppins", sans-serif;
@@ -308,6 +307,10 @@ h6,
 #nossos-servicos {
   padding-top: calc(2.4 * var(--m-1));
 }
+#fotos{
+  padding-top: calc(6 * var(--m-1)) !important;
+
+}
 #services--category {
   display: flex;
   align-items: center;
@@ -331,7 +334,7 @@ h6,
   min-width: 100px;
   padding: 10px;
   margin: 0 1rem;
-  overflow-y: scroll;
+  overflow-x: auto;
 }
 .services--card-title {
   font-size: var(--text-xl);
@@ -773,7 +776,7 @@ h6,
   margin: .5rem 0
 }
 .galery--menu{
-  overflow-x: scroll !important;
+  overflow-x: auto;
   padding-bottom: .5rem;
   width: 100%;
   display: flex;
@@ -823,7 +826,12 @@ h6,
   object-fit: cover;
   border-radius: var(--rounded-sm);
 }
-
+.galery-container{
+  display: none
+}
+#galery-varzea-alegre{
+  display: grid;
+}
 @media (min-width: 768px) {
   .galery-container {
     grid-template-columns: 1fr 1fr 1fr;
@@ -895,6 +903,11 @@ h6,
   }
   .services--card {
     display: none;
+  }
+}
+@media (min-width: 1440px) {
+  .galery--menu{
+    overflow: auto !important;
   }
 }
 @media (min-width: 1024px) {

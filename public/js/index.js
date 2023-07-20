@@ -25,7 +25,6 @@ theme_button.addEventListener('click', () => {
         nav_desktop.appendChild(theme_button)
     }
 
-/*==================== SERVICES MENU ====================*/
 const services_button = document.querySelectorAll('.services--category-item')
 const services_box = document.querySelectorAll('.services--card')
 
@@ -42,7 +41,22 @@ for (let i = 0; i <= 5; i++) {
     })
 }
 
-/*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
+const cities_button = document.querySelectorAll('.cities--category-item')
+const cities_box = document.querySelectorAll('.galery-container')
+
+for (let i = 0; i <= 6; i++) {
+    let city_number = cities_button[i].getAttribute("data-id-city")
+
+    cities_button[i].addEventListener('click', () => {
+        for (let b = 0; b <= 6; b++) {
+            cities_box[b].style.display = 'none'
+            cities_button[b].classList.remove('galery--menu-active')
+        }
+        cities_button[city_number].classList.add('galery--menu-active')
+        cities_box[city_number].style.display = "grid"
+    })
+}
+
 
 function activeNavElement() {
     let scrollY = window.pageYOffset

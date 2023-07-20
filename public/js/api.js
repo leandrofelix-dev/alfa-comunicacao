@@ -1,8 +1,8 @@
-const token = process.env.INSTAGRAM_TOKEN
+const token = ''
 
 const instagramSection = document.querySelector('#insta-recentes')
-const url =
-    `https://graph.instagram.com/me/media?access_token=${token}&fields=mediaUrl,mediaType,permaLink`
+const url = `https://graph.instagram.com/me/media?access_token=${token}&fields=mediaUrl,mediaType,permaLink`
+console.log(url)
 
 fetch(url)
     .then((res) => res.json())
