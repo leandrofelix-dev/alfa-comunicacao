@@ -87,3 +87,58 @@ body.dark-theme {
 .dark-theme .services--category-item-active {
   background: var(--yellow-g);
 }
+
+* {
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  list-style-type: none;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  background: var(--gray-150);
+  overflow-x: hidden;
+  transition: all ease-in-out 0.3s;
+  scroll-behavior: smooth;
+}
+
+.sections {
+  max-width: clamp(768px, 80vw, 1500px);
+  margin: 0 auto;
+}
+
+i,
+p,
+span,
+.section--text {
+  font-size: var(--text-lg);
+}
+
+h1,
+.main--slogan {
+  font-size: var(--text-2xl);
+  color: var(--gray-100);
+}
+
+h2,
+.section--title {
+  font-size: var(--text-xl);
+  line-height: 2rem;
+}
+
+h4,
+.section--target {
+  font-size: var(--text-md);
+  text-align: center;
+  color: var(--gray-100);
+}
+
+h6,
+.section--subtitle {
+  font-size: var(--text-md);
+}

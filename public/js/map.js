@@ -17,7 +17,7 @@ layer.addTo(map);
 
 for (let i = 0; i < cities.length; i++) {
   const { name, cep, lat, lng } = cities[i];
-  const marker = L.marker([lat, lng], { icon: pin }).addTo(map); // Adiciona o marcador ao mapa
+  const marker = L.marker([lat, lng], { icon: pin }).addTo(map); 
   marker.bindPopup(`<h3>${name}</h3>CEP: ${cep}`);
   L.circleMarker([lat, lng], {
     radius: 6,

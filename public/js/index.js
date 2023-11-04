@@ -28,16 +28,16 @@ theme_button.addEventListener('click', () => {
 const services_button = document.querySelectorAll('.services--category-item')
 const services_box = document.querySelectorAll('.services--card')
 
-for (let i = 0; i <= 5; i++) {
+for (let i = 0; i <= 6; i++) {
     let element_number = services_button[i].getAttribute("data-id")
 
     services_button[i].addEventListener('click', () => {
-        for (let a = 0; a <= 5; a++) {
+        for (let a = 0; a <= 6; a++) {
             services_box[a].style.display = 'none'
             services_button[a].classList.remove('services--category-item-active')
         }
         services_button[element_number].classList.add('services--category-item-active')
-        services_box[element_number].style.display = "grid"
+        services_box[element_number].style.display = "flex"
     })
 }
 
