@@ -7,6 +7,7 @@
 #footer {
   width: 100vw;
   margin: 0;
+  justify-content: center;
 }
 #load-page--exit-button-desktop {
   display: none;
@@ -394,9 +395,8 @@
 
 #footer {
   margin-top: calc(3 * var(--m-1));
-  display: grid;
-  grid-template-columns: 1em 1fr 1em;
-  grid-template-rows: 1fr auto;
+  display: flex;
+  flex-direction: column;
   background: var(--blue-g);
   text-align: center;
   padding: 1.5rem 0;
@@ -478,12 +478,20 @@
 
 #mobile-map {
   margin-top: 2rem;
+  margin: 2rem;
   height: 100vw;
   grid-column: -3;
   grid-row: 2;
   border-radius: var(--rounded-md);
 }
-
+.out-map{
+  margin-top: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+.out-map h2 {
+  margin-bottom: -1rem;
+}
 /* ====================== */
 
 #blog-card {
@@ -870,6 +878,9 @@
   :root {
     --skew-y: 2deg;
   }
+  .out-map h2 {
+    margin-bottom: 1rem;
+  }
   .services--card-info {
     align-items: left;
     justify-content: center;
@@ -925,9 +936,8 @@
   }
 
   #footer {
-    display: grid;
-    grid-template-columns: 1em 5fr 5fr 1em;
-    grid-template-rows: 1fr;
+    display: flex;
+    flex-direction: row;
   }
 
   #footer--wrapper {
@@ -946,6 +956,7 @@
     margin-bottom: auto;
     margin-left: auto;
     border-radius: var(--rounded-md);
+    max-width: 50rem;
   }
 
   .main-desktop--content {
@@ -1032,5 +1043,7 @@
   #footer {
     width: clamp(768px, 80vw, 1500px);
     margin: 0 auto;
+    align-items: center;
+    justify-content: center
   }
 }
