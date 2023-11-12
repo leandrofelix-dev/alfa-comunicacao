@@ -6,7 +6,9 @@ const cities = [
   { name: 'Iguatu', cep: '63500-000', lat: -6.358844230679799, lng: -39.298122955182194 },
   { name: 'Icó', cep: '63430-000', lat: -6.400585326642323, lng: -38.85720656466121 },
   { name: 'Jaguaribe', cep: '63475-000', lat: -5.892776452801664, lng: -38.62204473063314 },
-  { name: 'Farias Brito', cep: '63185-000', lat: -6.9261866, lng: -39.5733654}
+  { name: 'Farias Brito', cep: '63185-000', lat: -6.9261866, lng: -39.5733654 },
+  { name: 'Acopiara', cep: '63560-000', lat: -6.087715, lng: -39.460776 },
+  { name: 'Limoeiro do Norte', cep: '62930-000', lat: -5.140235, lng: -38.096786 }
 ];
 
 const zoom = { initial: 7, max: 12 };

@@ -44,11 +44,11 @@ for (let i = 0; i <= 6; i++) {
 const cities_button = document.querySelectorAll('.cities--category-item')
 const cities_box = document.querySelectorAll('.galery-container')
 
-for (let i = 0; i <= 7; i++) {
+for (let i = 0; i <= 8; i++) {
     let city_number = cities_button[i].getAttribute("data-id-city")
 
     cities_button[i].addEventListener('click', () => {
-        for (let b = 0; b <= 7; b++) {
+        for (let b = 0; b <= 8; b++) {
             cities_box[b].style.display = 'none'
             cities_button[b].classList.remove('galery--menu-active')
         }
