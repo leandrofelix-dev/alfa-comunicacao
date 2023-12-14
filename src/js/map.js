@@ -14,7 +14,7 @@ const cities = [
 const zoom = { initial: 7, max: 12 };
 const center = [-6.794393384922217, -39.29822986034189];
 const map = L.map('mobile-map').setView(center, zoom.initial);
-const pin = L.icon({ iconUrl: '../public/assets/img/pin-alfa.png', iconSize: [30, 40] });
+const pin = L.icon({ iconUrl: '../src/assets/img/pin-alfa.png', iconSize: [30, 40] });
 const layer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: zoom.max });
 layer.addTo(map);
 
