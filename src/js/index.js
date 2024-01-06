@@ -27,12 +27,13 @@ theme_button.addEventListener('click', () => {
 
 const services_button = document.querySelectorAll('.services--category-item')
 const services_box = document.querySelectorAll('.services--card')
+const services_quantity = document.querySelectorAll('.services--category-item').length - 1
 
-for (let i = 0; i <= 6; i++) {
+for (let i = 0; i <= services_quantity; i++) {
     let element_number = services_button[i].getAttribute("data-id")
 
     services_button[i].addEventListener('click', () => {
-        for (let a = 0; a <= 6; a++) {
+        for (let a = 0; a <= services_quantity; a++) {
             services_box[a].style.display = 'none'
             services_button[a].classList.remove('services--category-item-active')
         }
