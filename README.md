@@ -1,13 +1,17 @@
-# Alfa Comunicação
+# Alfa Comunicação - Landing Page
 
-Este é o repositório para o projeto de Alfa Comunicação.
+Este repositório contém o código da landing page da **[Alfa Comunicação](https://alfacomun.com.br/)**, uma empresa especializada em serviços de comunicação digital. O projeto é **proprietário** e não está disponível para uso público ou contribuições externas.
 
-A Alfa Comunicação é uma empresa de comunicação e marketing digital que oferece serviços de criação de conteúdo, gerenciamento de mídias sociais, SEO e muito mais.
+## Funcionalidades
 
-## Conteúdo do repositório
+- Design responsivo, adaptável a dispositivos móveis e desktops.
+- Apresentação de serviços e diferenciais da empresa.
+- SEO otimizado para melhor desempenho nos motores de busca.
 
-Neste repositório, você encontrará os seguintes arquivos e pastas:
+## Tecnologias Utilizadas
 
-- `assets`: esta pasta contém imagens e outros recursos visuais utilizados no projeto.
-- `src`: esta pasta contém o código-fonte do projeto, incluindo HTML, CSS e JavaScript.
-- `index.html`: este é o arquivo principal do projeto, que contém a estrutura básica do site.
+- **HTML5** e **CSS3**: Estruturação e estilização da página.
+- **JavaScript**: Para interatividade e funcionalidade da página.
+
+## Licença
+Este projeto é de propriedade da Alfa Comunicação e não está disponível para distribuição, modificação ou uso público.
